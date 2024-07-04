@@ -1,0 +1,76 @@
+{% extends "../settings/settings-base.html" %}
+{% load static %}
+
+{% block settings_css %}
+<link rel="stylesheet" href="{% static "UoneR/settings/css/personal-information.css" %}">
+{% endblock settings_css %}
+{% block settings_title %}Personal Information{% endblock settings_title %}
+
+{% block settings %}
+
+<div class="settings-main-content-container">
+    <form action="">
+        <div class="title-image-container">
+            <div class="profile-image-container ">
+                <label for="profile_image">
+                    <img class="profile-image cursor-pointer" id="profile-image" src="{% static "UoneR/settings/images/profile-image.png" %}" alt="">
+                    <input class="d-none" type="file" name="profile-image" id="profile_image" onchange="previewImage(event, this); ">
+                    <svg class="edit-svg" width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_69_3864)">
+                        <rect x="5.5" y="5" width="40" height="40" rx="20" fill="#8EC549" shape-rendering="crispEdges"/>
+                        <g clip-path="url(#clip0_69_3864)">
+                        <path d="M17.45 30.6581C17.4495 31.2912 17.7001 31.8986 18.1469 32.347C18.5937 32.7955 19.2002 33.0484 19.8332 33.0502H19.8333L17.5 20.6755M17.45 30.6581C17.45 30.6581 17.45 30.6581 17.45 30.6581L17.5 30.6582H17.45V30.6581ZM17.45 30.6581L17.45 20.6755M17.45 20.6755L17.5 20.6755M17.45 20.6755L17.45 20.6755H17.5M17.45 20.6755C17.4495 20.0425 17.7001 19.4351 18.1469 18.9866C18.5937 18.5382 19.2002 18.2853 19.8332 18.2835L19.8333 18.2835L24.8333 18.2835C25.0234 18.2835 25.2057 18.359 25.3401 18.4934C25.4745 18.6278 25.55 18.8101 25.55 19.0002C25.55 19.1902 25.4745 19.3725 25.3401 19.5069C25.2057 19.6413 25.0234 19.7168 24.8333 19.7168H19.8335C19.5805 19.7182 19.3384 19.8199 19.1602 19.9995C18.9821 20.1792 18.8825 20.4223 18.8833 20.6753L18.8833 20.6755L18.8833 30.6582V30.6583C18.8825 30.9114 18.9821 31.1544 19.1602 31.3341C19.3383 31.5138 19.5804 31.6154 19.8334 31.6168C19.8335 31.6168 19.8335 31.6168 19.8336 31.6168H29.8331C29.8331 31.6168 29.8332 31.6168 29.8332 31.6168C30.0862 31.6154 30.3283 31.5138 30.5064 31.3341C30.6846 31.1544 30.7842 30.9114 30.7833 30.6583V30.6582V25.6335C30.7833 25.4434 30.8588 25.2611 30.9932 25.1267C31.1276 24.9923 31.3099 24.9168 31.5 24.9168C31.6901 24.9168 31.8724 24.9923 32.0068 25.1267C32.1412 25.2611 32.2167 25.4434 32.2167 25.6335V30.6581V30.6582H32.1667L17.5 20.6755" fill="white" stroke="white" stroke-width="0.1"/>
+                        <path d="M23.7541 24.0186L23.7542 24.0182C23.7845 23.8844 23.8526 23.762 23.9504 23.6658C23.9505 23.6657 23.9505 23.6656 23.9506 23.6656L30.0169 17.5839L30.0178 17.5831L30.0178 17.5831C30.4079 17.2103 30.9267 17.0022 31.4663 17.0022C32.0059 17.0022 32.5248 17.2103 32.9149 17.5831L32.9157 17.5839L32.9157 17.5839C33.1061 17.7742 33.2571 18.0002 33.3602 18.249C33.4632 18.4977 33.5162 18.7643 33.5162 19.0336C33.5162 19.3028 33.4632 19.5694 33.3602 19.8181C33.2571 20.0669 33.1061 20.2929 32.9157 20.4833L26.8398 26.5592L23.7541 24.0186ZM23.7541 24.0186L23.2281 26.4279L23.2281 26.4279M23.7541 24.0186L23.2281 26.4279M23.2281 26.4279C23.2026 26.5454 23.2069 26.6674 23.2409 26.7828C23.2748 26.8981 23.3372 27.0031 23.4224 27.088L23.4231 27.0887M23.2281 26.4279L23.4231 27.0887M23.4231 27.0887C23.5092 27.1712 23.6139 27.2318 23.7284 27.2653C23.8428 27.2987 23.9637 27.3041 24.0807 27.2809L24.0807 27.281M23.4231 27.0887L24.0807 27.281M24.0807 27.281L24.0817 27.2807M24.0807 27.281L24.0817 27.2807M24.0817 27.2807L26.4857 26.7534L26.4857 26.7534M24.0817 27.2807L26.4857 26.7534M26.4857 26.7534C26.6199 26.7239 26.7427 26.6566 26.8397 26.5593L26.4857 26.7534ZM30.5944 19.0333L31.03 18.5983C31.1474 18.486 31.3038 18.4232 31.4663 18.4232C31.6288 18.4232 31.7851 18.4859 31.9025 18.5981C32.0163 18.7145 32.0801 18.8708 32.0801 19.0336C32.0801 19.1965 32.0162 19.353 31.9022 19.4694C31.9021 19.4694 31.902 19.4695 31.902 19.4696L31.4663 19.9052L30.5944 19.0333ZM25.968 25.3989L24.862 25.6416L25.1074 24.5302L29.5776 20.0487L30.4404 20.9159L25.968 25.3989Z" fill="white" stroke="white" stroke-width="0.1"/>
+                        </g>
+                        </g>
+                        <defs>
+                        <filter id="filter0_d_69_3864" x="0.5" y="0" width="50" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset/>
+                        <feGaussianBlur stdDeviation="2.5"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.13 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_69_3864"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_69_3864" result="shape"/>
+                        </filter>
+                        <clipPath id="clip0_69_3864">
+                        <rect width="16" height="16" fill="white" transform="translate(17.5 17)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>              
+                </label>
+            </div>
+            <span>Profile Picture</span>    
+        </div>
+
+        <div class="inputs-container">
+            <div class="input-wrapper">
+                <label for="business-name">Business Name</label>
+                <input type="text" name="business-name" id="business-name" placeholder="Carpet Expo">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name" placeholder="Alexandra">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="alexandra@gamil.com">
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button type="buttom">Save Changes</button>
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock settings %}
+
+{% block settings_js %}
+<script src="{% static "UoneR/settings/js/personal-information.js" %}"></script>
+{% endblock settings_js %}

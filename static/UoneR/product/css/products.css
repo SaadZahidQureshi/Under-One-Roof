@@ -1,0 +1,377 @@
+
+.services-container, .products-container {
+    width: 100%;
+    margin: 30px 0px;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.products-container > .products-filters {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.products-container > .products-heading > h4{
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 26.4px;
+    text-align: left;
+    margin: 0;
+}
+
+/* -----------------------show dropdown-------------------------- */
+ .input-wrapper {
+    /* margin-bottom: 20px; */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper label {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: left;
+    color: #000000;
+}
+
+ .input-wrapper > div {
+    display: flex;
+    align-items: center;
+}
+
+ .input-wrapper > div input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px #00000021;
+    padding-left: 44px;
+    padding-right: 10px;
+    line-height: 24px;
+}
+
+.input-wrapper .show-hide-icon {
+    right: 10px;
+    left: unset !important;
+}
+
+ .input-wrapper > div svg {
+    position: absolute;
+    left: 10px;
+    /* bottom: 17px; */
+}
+
+ .input-wrapper .added-user-role {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 130px;
+    height: 50px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+ .input-wrapper .added-user-role.show {
+    display: flex!important;
+}
+
+ .input-wrapper .added-user-role > span {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 20.8px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+ .input-wrapper .added-user-role > svg {
+    position: static;
+}
+
+.selection-div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.selection-div > input {
+    padding-right: 30px;
+}
+
+.selection-div + svg {
+    left: unset!important;
+    right: 15px;
+}
+
+.filter-dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute!important;
+    z-index: 1;
+    top: 84px;
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #E0E0DD;
+}
+
+#company-dropdown {
+    max-height: 216px;
+    overflow-y: auto;
+}
+
+.radio-btn > label {
+    width: 100%;
+    padding: 0px 15px;
+    min-height: 40px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 16px;
+    word-wrap: break-word;
+}
+/* 
+.radio-btn > label:first-of-type {
+    border-radius: 8px 0px 8px 0px;
+}
+
+.radio-btn > label:last-of-type {
+    border-radius: 0px 8px 8px 0px;
+} */
+
+.radio-btn:not(:first-child) {
+    border-top: 1px solid #E0E0DD;
+}
+
+.radio-btn > label:hover {
+    background-color: #DDDDDD;
+}
+
+.filter-dropdown input {
+    display: none;
+}
+
+
+#no-company-text {
+    font-weight: 500;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------products type radio button-------------- */
+
+.product-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscription-duration-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.subscription-duration-group .duration-radio-btn {
+    position: relative;
+    width: 210px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+input[name="subscription_duration_radio"] {
+    display: none;
+}
+
+.subscription-duration-group .duration-radio-btn .duration-radio-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 20.8px;
+    text-align: center;
+    color: var(--text-field-heading);
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px 0px #00000021;
+    border-radius: 0px 8px 8px 0px;
+    transition: all ease .1s;
+    cursor: pointer;
+}
+
+.subscription-duration-group .duration-radio-btn:first-of-type .duration-radio-label {
+    border-radius: 8px 0px 0px 8px;
+}
+
+.subscription-duration-group .duration-radio-btn:nth-child(2) .duration-radio-label {
+    border-radius: 0px;
+}
+
+.subscription-duration-group .duration-radio-btn:last-of-type .duration-radio-label {
+    border-radius: 0px 8px 8px 0px;
+}
+
+.subscription-duration-group .duration-radio-btn .duration-radio-label .savings {
+    font-size: .75rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 15.6px;
+    text-align: right;
+    color: var(--primary-color)!important;
+}
+
+input[name="subscription_duration_radio"]:checked + .duration-radio-label {
+    color: #9A9A9A!important;
+    background: var(--primary-color)!important;
+    /* border-radius: 8px!important; */
+    border: 2px solid  var(--primary-color)!important;
+    box-shadow: none!important;
+    color: #FFFFFF!important;
+}
+
+/* --------------------------------------------- */
+
+.products-list-container{
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat( auto-fit, minmax(240px, 1fr ) );
+    grid-gap: 1em;
+}
+
+.products-list-container > .product-content {
+    border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    overflow: hidden;
+    /* width: 268px;
+    height: 322px; */
+}
+
+.products-list-container > .product-content > .product-image-container{
+    width: 100%;
+    height: 75%;
+}
+
+.products-list-container > .product-content > .product-image-container > img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain;
+    object-position: center; */
+}
+
+.products-list-container > .product-content > .product-info-container {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.products-list-container > .product-content > .product-info-container > span:last-of-type {
+    color: var(--primary-color);
+}
+
+.services-container {
+    padding: 50px 70px;
+    width: 100%;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px 4px #0000000F;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services-container > .service-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.services-container > .service-content > .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+}
+
+.services-container > .service-content > .text-container > span:first-child{
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 19.8px;
+    text-align: left;
+}
+
+.services-container > .service-content > .text-container > span:last-of-type {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 16.5px;
+    text-align: left;
+    color: #454545;
+}
+
+/* @media (max-width: 1916px) {
+    .products-list-container > .product-content {
+        flex-basis: 19.33%;
+    }
+}
+
+@media (max-width: 1910px) {
+    .products-list-container > .product-content {
+        flex-basis: 24.33%;
+    }
+}
+
+@media (max-width: 1796px) {
+    .products-list-container > .product-content {
+        flex-basis: 32.73%;
+    }
+} */
+
+@media (max-width: 1358px) {
+    .products-list-container > .product-content {
+        flex-basis: 32.45%;
+    }
+}
+
+@media (max-width: 1228px) {
+    .products-list-container > .product-content {
+        flex-basis: 49.3%;
+    }
+}
+
+@media (max-width:1290px) {
+    .services-container {
+        gap: 30px;
+    }
+    .products-container > .products-filters{
+        gap: 20px;
+    }
+}

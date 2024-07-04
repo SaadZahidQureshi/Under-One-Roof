@@ -1,0 +1,106 @@
+.payment-cards-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.payment-cards-container > .payment-cards-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-cards-container > .payment-cards-header > h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: #000000;
+    margin: 0;
+}
+
+.payment-cards-container > .payment-cards-header > button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 7px 24px;
+    background-color: var(--primary-color);
+    border: none;
+    color: #ffffff;
+}
+
+.payment-cards-container > .payment-cards-header > button > span{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: inherit;
+}
+
+.payment-cards-container > .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+.payment-cards-container > .cards-container > .payment-card {
+    width: 49.22%;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px 4px #0000000F;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.payment-cards-container > .cards-container > .payment-card > .image-action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-cards-container > .cards-container > .payment-card > .image-action > .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-cards-container > .cards-container > .payment-card > .image-action > .actions > svg {
+    width: 30px;
+    height: 30px;
+}
+
+.payment-cards-container > .cards-container > .payment-card > .card-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.payment-cards-container > .cards-container > .payment-card > .card-info > span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.6px;
+    text-align: left;
+    color: #000000;
+}
+
+.payment-cards-container > .button-container {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.payment-cards-container > .button-container > button {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    width: 50%;
+    padding: 10px 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+}
+

@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %} Cart {% endblock title %}
+{% block addcss %}
+<link rel="stylesheet" href="{% static 'UoneR/cart/css/cart.css' %}">
+<link rel="stylesheet" href="{% static 'UoneR/modals/css/payment-cards.css' %}">
+<link rel="stylesheet" href="{% static 'UoneR/modals/css/congrats.css' %}">
+{% endblock addcss %}
+
+{% block content %}
+<div class="cart-container">
+    <div class="cart-heading">
+        <h4>My Shopping Cart</h4>
+    </div>
+
+    <div class="cart-description-container row">
+        <div class="col-8">
+            <div class="cart-description">
+                <div class="cart-header">
+                    <h4>Description</h4>
+                    <h4>Total Price</h4>
+                </div>
+                <hr>
+                <div class="cart-items-list-container">
+                    {% for i in range %}
+                        <div class="cart-item">
+                            <div class="cart-item-info">
+                                <div class="item-image-container">
+                                    <img src="{% static "UoneR/product/images/product-1.png" %}" alt="">
+                                </div>
+                                <div class="item-info-container">
+                                    <div class=""><span>Carpet Style Sisal</span></div>
+                                    <div class=""><span>Expo Center | Green</span></div>
+                                    <div class=""><span>Price per Sq feet: </span> <span>$8</span></div>
+                                    <div class="dimensions">
+                                        <div class="">
+                                            <span>Width</span>
+                                            <input type="text" name="" id="">
+                                            <span>Feet</span>
+                                        </div>
+                                        <div class="">
+                                            <span>Width</span>
+                                            <input type="text" name="" id="">
+                                            <span>Feet</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-item-action">
+                                <div class="">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1.93408" y="1.5" width="30" height="30" rx="7" stroke="#FF3B30" stroke-width="2"/>
+                                        <path d="M23.1195 14.3618C23.1195 14.3618 22.661 20.0491 22.395 22.4448C22.2683 23.5891 21.5615 24.2595 20.4038 24.2807C18.2006 24.3203 15.9949 24.3229 13.7926 24.2764C12.6788 24.2536 11.9838 23.5747 11.8597 22.4507C11.592 20.0339 11.136 14.3618 11.136 14.3618" stroke="#FF3B30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M24.2876 11.6356H9.96753" stroke="#FF3B30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.5282 11.6357C20.8653 11.6357 20.2945 11.1671 20.1644 10.5177L19.9592 9.49083C19.8326 9.0171 19.4036 8.68945 18.9147 8.68945H15.3401C14.8512 8.68945 14.4222 9.0171 14.2955 9.49083L14.0903 10.5177C13.9603 11.1671 13.3895 11.6357 12.7266 11.6357" stroke="#FF3B30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </div>
+                                <div class="">
+                                    <span>02 x 102 X (8+2+5)</span>
+                                </div>
+                                <div class=""><span>=$3200</span></div>
+                            </div>
+                        </div>
+                        <hr class="w-100">
+                    {% endfor %}
+                </div>
+                <div class="more-Shopping">
+                    <a href='#'>Continue Shopping</a href='#'>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="order-description">
+                <div class="">
+                    <div class="order-header">
+                        <h4>Order Summary</h4>
+                    </div>
+                    <hr class="w-100">
+                    <div class="amount-container">
+                        <div class=""><span>Sub Total</span><span>$55</span></div>
+                        <div class=""><span>Estimated Tax</span><span>$4.00</span></div>
+                    </div>
+                </div>
+                <div class="chechout-button-container">
+                    <div class="">
+                        <hr class="w-100">
+                        <div class="total-amount">
+                            <span>Total</span><span>$68.99</span>
+                        </div>
+                    </div>
+                    <div class="">
+                        <button type="button" onclick="openCongratsModal('payment-cards-modal')">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "../includes/services-container.html" %}
+{% include "../modals/payment-cards.html" %}
+{% include "../modals/congrats.html" %}
+{% endblock content %}
+
+{% block addjs %}
+<script src="{% static 'UoneR/modals/js/payment-cards.js' %}"></script>
+<script src="{% static 'UoneR/modals/js/congrats.js' %}"></script>
+{% endblock addjs %}

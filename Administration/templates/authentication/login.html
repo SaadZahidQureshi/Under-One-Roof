@@ -1,0 +1,82 @@
+{% extends "authentication/base.html" %}
+{% load static %}
+
+{% block addcss %}
+<link rel="stylesheet" href="{% static "administration/authentication/css/login.css" %}">
+{% endblock addcss %}
+{% block title %}Login{% endblock title %}
+
+{% block content %}
+
+
+<div class="login-content">
+    <div class="title-info-container">
+        <h4>Hello Again!</h4>
+        <span>Welcome Back</span>
+    </div>
+
+    <div class="form-container">
+        <form action="">
+            <div class="input-wrapper">
+                <label for="email">Email</label>
+                <div class="w-100">
+                    <input type="email" name="email" id="email" placeholder="alexandra@gamil.com">
+                </div>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="Password">Password</label>
+                <div class="w-100 position-relative">
+                    <input type="Password" name="Password" id="Password" placeholder="********">
+                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_163_186)">
+                        <path d="M10.465 10.965C9.46782 11.7251 8.25363 12.1462 6.99998 12.1667C2.91665 12.1667 0.583313 7.5 0.583313 7.5C1.30892 6.14778 2.31531 4.96636 3.53498 4.035M5.77498 2.97334C6.17651 2.87935 6.5876 2.83237 6.99998 2.83334C11.0833 2.83334 13.4166 7.5 13.4166 7.5C13.0626 8.16244 12.6403 8.7861 12.1566 9.36084M8.23665 8.73667C8.07644 8.90861 7.88323 9.04651 7.66857 9.14216C7.4539 9.23781 7.22217 9.28924 6.9872 9.29338C6.75223 9.29753 6.51882 9.25431 6.30092 9.16629C6.08301 9.07827 5.88507 8.94727 5.71889 8.78109C5.55271 8.61492 5.42171 8.41697 5.33369 8.19906C5.24568 7.98116 5.20245 7.74776 5.2066 7.51278C5.21075 7.27781 5.26218 7.04608 5.35782 6.83141C5.45347 6.61675 5.59138 6.42355 5.76331 6.26334M0.583313 1.08334L13.4166 13.9167" stroke="#8EC549" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_163_186">
+                        <rect width="14" height="14" fill="white" transform="translate(0 0.5)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>  
+                </div>                  
+            </div>
+            <div class="forget-password"><a href="#" onclick="location.pathname='administration/forgot-password/'">Forgot Password</a></div>
+
+            <div class="button-container">
+                <button type='button' onclick="location.pathname='/administration/users/'">Log In</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="social-media-container">
+        <div class="separator">
+            <div class="w-25"><hr></div><div class="w-50 text-center">Or continue with</div><div class="w-25"><hr></div>
+        </div>
+
+        <div class="media-butttons">
+            <button>
+                <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.44 14.8182C27.44 13.8255 27.3509 12.8709 27.1855 11.9546H14V17.37H21.5345C21.21 19.12 20.2236 20.6027 18.7409 21.5955V25.1082H23.2655C25.9127 22.6709 27.44 19.0818 27.44 14.8182Z" fill="#4285F4"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0001 28.5C17.7801 28.5 20.9491 27.2464 23.2655 25.1082L18.741 21.5955C17.4873 22.4355 15.8837 22.9318 14.0001 22.9318C10.3537 22.9318 7.26732 20.4691 6.16641 17.16H1.48914V20.7873C3.79277 25.3627 8.52732 28.5 14.0001 28.5Z" fill="#34A853"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.16637 17.16C5.88637 16.32 5.72727 15.4227 5.72727 14.5C5.72727 13.5773 5.88637 12.68 6.16637 11.84V8.21273H1.48909C0.540909 10.1027 0 12.2409 0 14.5C0 16.7591 0.540909 18.8973 1.48909 20.7873L6.16637 17.16Z" fill="#FBBC05"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0001 6.06818C16.0555 6.06818 17.901 6.77455 19.3519 8.16182L23.3673 4.14637C20.9428 1.88727 17.7737 0.5 14.0001 0.5C8.52732 0.5 3.79277 3.63727 1.48914 8.21273L6.16641 11.84C7.26732 8.53091 10.3537 6.06818 14.0001 6.06818Z" fill="#EA4335"/>
+                </svg>                    
+            </button>
+            <button>
+                <svg width="23" height="29" viewBox="0 0 23 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.8414 6.96154C13.1172 6.96154 14.7164 6.10712 15.6687 4.9679C16.5312 3.93547 17.1602 2.49364 17.1602 1.05181C17.1602 0.856008 17.1422 0.660203 17.1062 0.5C15.6867 0.553401 13.9797 1.44342 12.9555 2.63605C12.1469 3.54387 11.4102 4.9679 11.4102 6.42753C11.4102 6.64113 11.4461 6.85474 11.4641 6.92594C11.5539 6.94374 11.6977 6.96154 11.8414 6.96154ZM7.34922 28.5C9.09219 28.5 9.86484 27.343 12.0391 27.343C14.2492 27.343 14.7344 28.4644 16.675 28.4644C18.5797 28.4644 19.8555 26.72 21.0594 25.0111C22.407 23.0531 22.9641 21.1306 23 21.0416C22.8742 21.006 19.2266 19.5286 19.2266 15.3811C19.2266 11.7854 22.1016 10.1656 22.2633 10.041C20.3586 7.33535 17.4656 7.26414 16.675 7.26414C14.5367 7.26414 12.7937 8.54577 11.6977 8.54577C10.5117 8.54577 8.94844 7.33535 7.09766 7.33535C3.57578 7.33535 0 10.219 0 15.6659C0 19.048 1.32969 22.6259 2.96484 24.9399C4.36641 26.898 5.58828 28.5 7.34922 28.5Z" fill="#000100"/>
+                </svg>                    
+            </button>
+            <button>
+                <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.0061 14.5856C28.0061 6.80631 21.7367 0.5 14.003 0.5C6.26936 0.5 0 6.80631 0 14.5856C0 21.6161 5.1207 27.4433 11.8151 28.5V18.6572H8.2596V14.5856H11.8151V11.4823C11.8151 7.95214 13.9056 6.00217 17.1042 6.00217C18.6363 6.00217 20.2388 6.27728 20.2388 6.27728V9.74365H18.473C16.7335 9.74365 16.191 10.8294 16.191 11.9433V14.5856H20.0747L19.4538 18.6572H16.191V28.5C22.8853 27.4433 28.0061 21.6161 28.0061 14.5856Z" fill="#1778F2"/>
+                </svg>                    
+            </button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+
+{% block addjs %}{% endblock addjs %}

@@ -1,0 +1,42 @@
+{% extends "authentication/base.html" %}
+{% load static %}
+{% block addcss %}
+<link rel="stylesheet" href="{% static "administration/authentication/css/code-verify.css" %}">
+{% endblock addcss %}
+{% block title %}Verification Code{% endblock title %}
+
+{% block content %}
+
+<div class="code-verify-content">
+    <div class="title-info-container">
+        <h4>Verification Code</h4>
+        <span>Please provide the OTP code sent to your registered phone number</span>
+    </div>
+
+    <div class="form-container h-100">
+        <form action="">
+            <div class="input-wrapper">
+                <div class="code-inputs w-100">
+                    <input id='input1' required placeholder="•" name="digit1" type='text' maxLength="1" />
+                    <input id='input2' required placeholder="•" name="digit2" type='text' maxLength="1" />
+                    <input id='input3' required placeholder="•" name="digit3" type='text' maxLength="1" />
+                    <input id='input4' required data-position="last" placeholder="•" name="digit4" type='text' maxLength="1" />
+                </div>
+                <div class="resend-code-container justify-content-center">
+                    <span class="didnt-recieved-code">Didn’t receive the code? <a href="#">Resend Code</a></span>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="button" onclick="location.pathname='administration/reset-password'">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock content %}
+
+{% block addjs %}
+<script src="{% static "administration/authentication/js/code-verify.js" %}"></script>
+{% endblock addjs %}

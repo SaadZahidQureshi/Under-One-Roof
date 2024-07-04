@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %} 
+{% block settings_title %}{% endblock settings_title %}
+{% endblock title %}
+{% block addcss %}
+<link rel="stylesheet" href="{% static "UoneR/settings/css/settings-base.css" %}">
+<link rel="stylesheet" href="{% static "UoneR/modals/css/delete.css" %}">
+{% block settings_css %}{% endblock settings_css %}
+{% endblock addcss %}
+
+{% block content %}
+
+<div class="row base-settings-container">
+    <div class="col-3">
+        <div class="side-bar">
+            <div class="header">
+                <h4>Settings</h4>
+            </div>
+
+            <ul class="nav-bar">
+                <li class="nav-item cursor-pointer {% if active_sidebar  == 'personal_information'%}active{% endif %}" onclick="location.pathname='/personal-information/'">
+                    <div class="">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.6142 11.0512C13.0331 11.0512 14.994 9.09025 14.994 6.67134C14.994 4.25242 13.0331 2.2915 10.6142 2.2915C8.19529 2.2915 6.23438 4.25242 6.23438 6.67134C6.23438 9.09025 8.19529 11.0512 10.6142 11.0512Z" stroke="#313131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66603 17.1426C3.66487 16.8347 3.73373 16.5306 3.86742 16.2532C4.28695 15.4142 5.47001 14.9695 6.45171 14.7681C7.1597 14.617 7.87748 14.5161 8.59969 14.466C9.9368 14.3486 11.2816 14.3486 12.6188 14.466C13.3409 14.5166 14.0586 14.6176 14.7667 14.7681C15.7484 14.9695 16.9315 15.3722 17.351 16.2532C17.6199 16.8186 17.6199 17.475 17.351 18.0404C16.9315 18.9214 15.7484 19.3241 14.7667 19.5171C14.0596 19.6745 13.3415 19.7782 12.6188 19.8276C11.5305 19.9198 10.4371 19.9367 9.34644 19.8779C9.09473 19.8779 8.8514 19.8779 8.59969 19.8276C7.87961 19.7789 7.16432 19.6751 6.4601 19.5171C5.47001 19.3241 4.29534 18.9214 3.86742 18.0404C3.73441 17.7598 3.66562 17.4531 3.66603 17.1426Z" stroke="#313131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                        <span>Personal Information</span>                            
+                    </div>
+                </li>
+                <li class="nav-item cursor-pointer {% if active_sidebar  == 'change_password'%}active{% endif %}" onclick="location.pathname='/change-password/'">
+                    <div class="">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.30523 9.87961L6.29866 7.64666C6.29051 3.1651 7.78524 0.924316 10.7829 0.924316C13.7805 0.924316 15.2731 3.1651 15.2606 7.64666V9.87961M6.30523 9.87961H15.2857C16.466 9.87961 17.433 10.7929 17.5184 11.9513L17.5246 12.1247L17.5056 18.8412C17.5022 20.0752 16.5008 21.0737 15.2668 21.0737H6.30523C5.06876 21.0737 4.06641 20.0714 4.06641 18.8349V12.1184C4.06641 10.882 5.06876 9.87961 6.30523 9.87961Z" stroke="#454545" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.7826 17.8031C11.71 17.8031 12.4618 17.0513 12.4618 16.1239C12.4618 15.1966 11.71 14.4448 10.7826 14.4448C9.85528 14.4448 9.10352 15.1966 9.10352 16.1239C9.10352 17.0513 9.85528 17.8031 10.7826 17.8031Z" fill="#454545"/>
+                        </svg>
+                        <span>Change Password</span>                            
+                    </div>
+                </li>
+                <li class="nav-item cursor-pointer {% if active_sidebar  == 'payment_cards'%}active{% endif %}" onclick="location.pathname='/payment-cards/'">
+                    <div class="">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.828 7.51269H17.921L17.3747 4.41729C17.2491 3.69839 16.5541 3.2183 15.8418 3.34224L1.94061 5.79394C1.22254 5.92037 0.740792 6.60869 0.868046 7.32759L2.35047 15.7329C2.41162 16.0808 2.60415 16.3849 2.89336 16.5882C3.11895 16.746 3.38089 16.8286 3.65027 16.8286C3.72795 16.8286 3.80562 16.822 3.8833 16.808L4.38983 16.7185V17.3542C4.38983 18.0838 4.98313 18.6771 5.71277 18.6771H19.828C20.5576 18.6771 21.1518 18.0838 21.1518 17.3542V8.83563C21.1518 8.10599 20.5576 7.51269 19.828 7.51269ZM19.8825 8.83563V10.0801H5.66407L5.71277 8.78192L19.8825 8.83563ZM3.59987 15.5131L2.35708 8.46627L2.16124 7.04334L16.1253 4.63709L16.6325 7.51269H5.71277C4.98313 7.51269 4.38983 8.10599 4.38983 8.83563V15.4076L3.59987 15.5131ZM19.828 17.4079L5.65906 17.3542V12.3268H19.8825V17.3542C19.8825 17.3839 19.8578 17.4079 19.828 17.4079Z" fill="#313131"/>
+                        </svg>
+                        <span>Payment Cards</span>                            
+                    </div>
+                </li>
+                <li class="nav-item  cursor-pointer{% if active_sidebar  == 'delete_account'%}active{% endif %}" onclick="openDeleteModal('delete-modal');">
+                    <div class="">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.5293 5.32839H5.11443L5.76994 17.771C5.77138 18.554 6.40664 19.1884 7.18994 19.1884H14.4499C15.2332 19.1884 15.8685 18.554 15.8699 17.771L16.5139 5.32839H17.0693H17.1693V5.22839V4.56839V4.46839H17.0693H17.0693H13.8693V3.90839C13.8693 3.12423 13.2335 2.48838 12.4493 2.48838H9.14929C8.36509 2.48838 7.72928 3.12423 7.72928 3.90839V4.46839H4.5293H4.4293V4.56839V5.22839V5.32839H4.5293ZM5.97535 5.32839H15.653L15.0114 17.7277L15.0102 17.7433L15.0099 17.7432V17.751V17.7684C15.0099 18.0767 14.7587 18.3284 14.4499 18.3284H7.18991C6.88165 18.3284 6.6299 18.0767 6.6299 17.7684V17.751H6.62997L6.62984 17.7473L6.62921 17.73L6.62922 17.73L6.62913 17.7283L5.97535 5.32839ZM8.58929 3.90839C8.58929 3.59953 8.84097 3.34838 9.14929 3.34838H12.4493C12.7582 3.34838 13.0093 3.59946 13.0093 3.90839V4.46839H8.58929V3.90839Z" fill="#FF3B30" stroke="#FF3B30" stroke-width="0.2"/>
+                            <path d="M11.2297 6.54834V6.44834H11.1297H10.4697H10.3697V6.54834V17.1083V17.2083H10.4697H11.1297H11.2297V17.1083V6.54834Z" fill="#FF3B30" stroke="#FF3B30" stroke-width="0.2"/>
+                            <path d="M9.17058 17.187L9.27043 17.1806L9.26403 17.0808L8.58858 6.54146L8.58219 6.44171L8.48244 6.44805L7.82374 6.48991L7.72388 6.49625L7.73028 6.5961L8.40577 17.1354L8.41216 17.2352L8.5119 17.2288L9.17058 17.187Z" fill="#FF3B30" stroke="#FF3B30" stroke-width="0.2"/>
+                            <path d="M13.8735 6.57535L13.8798 6.4755L13.78 6.46925L13.1213 6.42803L13.0215 6.42178L13.0152 6.52154L12.3494 17.0815L12.3431 17.1814L12.443 17.1876L13.1017 17.2288L13.2014 17.2351L13.2077 17.1353L13.8735 6.57535Z" fill="#FF3B30" stroke="#FF3B30" stroke-width="0.2"/>
+                        </svg>
+                        <span>Delete Account</span>                            
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-9">
+        <div class="settings-main-content d-flex justify-content-center">
+            {% block settings %}{% endblock settings %}
+        </div>
+    </div>
+</div>
+
+{% include "../includes/services-container.html" %}
+{% include "../modals/delete.html" %}
+{% endblock content %}
+
+{% block addjs %}
+<script src="{% static "UoneR/modals/js/delete.js" %}"></script>
+{% block settings_js %}{% endblock settings_js %}
+{% endblock addjs %}

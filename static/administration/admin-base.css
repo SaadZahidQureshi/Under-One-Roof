@@ -1,0 +1,14 @@
+.main-content {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-content > div:last-child {
+    width: calc(100% - 260px);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content > div:last-child > div:last-child {
+    padding: 20px;
+}

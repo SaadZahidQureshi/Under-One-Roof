@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %} About Us {% endblock title %}
+{% block addcss %}
+<link rel="stylesheet" href="{% static "UoneR/aboutus/css/about_us.css" %}">
+{% endblock addcss %}
+
+{% block content %}
+
+<div class="aboutus-container">
+    <div class="aboutus-header">
+        <h4>About Us</h4>
+    </div>
+
+    <div class="aboutus-main-content-container">
+        <div class="header">
+            <span>How it Started</span>
+            <h5>Shop Smart, Shop Anywhere – Your Global Marketplace at Your Fingertips!</h5>
+        </div>
+        <div class="body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. Duis molestie bibendum nisi, sit amet dignissim odio euismod quis. Donec lobortis, massa eu accumsan imperdiet, massa arcu consectetur tellus, eget dapibus sem leo nec turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. Duis molestie bibendum nisi, sit amet dignissim odio euismod quis. Donec lobortis, massa eu accumsan imperdiet, massa arcu consectetur tellus, eget dapibus sem leo nec turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. Duis molestie bibendum nisi, sit amet dignissim odio euismod quis. Donec lobortis, massa eu accumsan imperdiet, massa arcu consectetur tellus, eget dapibus sem leo nec turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. Duis molestie bibendum nisi, sit amet dignissim odio euismod quis. Donec lobortis, massa eu accumsan imperdiet, massa arcu consectetur tellus, eget dapibus sem leo nec turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. Duis molestie bibendum nisi, sit amet dignissim odio euismod quis. Donec lobortis, massa eu accumsan imperdiet, massa arcu consectetur tellus, eget dapibus sem leo nec turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. Duis molestie bibendum nisi, sit amet dignissim odio euismod quis. Donec lobortis, massa eu accumsan imperdiet, massa arcu consectetur tellus, eget dapibus sem leo nec turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus posuere leo vitae consectetur. </p>
+        </div>
+        <div class="footer">
+            <div class="">
+                <span>3.5</span>
+                <span>Years Experience</span>
+            </div>
+            <div class="">
+                <span>1,123</span>
+                <span>Products</span>
+            </div>
+            <div class="">
+                <span>100</span>
+                <span>Trusted Employees</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "../includes/services-container.html" %}
+{% endblock content %}
+
+{% block addjs %}{% endblock addjs %}

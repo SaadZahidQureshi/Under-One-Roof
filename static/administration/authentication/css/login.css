@@ -1,0 +1,158 @@
+.login-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 66px 180px;
+}
+
+.login-content > .title-info-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-content > .title-info-container > h4 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26.4px;
+    text-align: center;
+    color: #000000;
+}
+
+.login-content > .title-info-container > span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: center;
+    color: #454545;
+}
+
+.login-content > .form-container {
+    width: 100%;
+}
+
+.login-content > .form-container > form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+
+.login-content > .form-container > form > .input-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.login-content > .form-container > form > .input-wrapper > label {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
+    color: #000000;
+}
+
+.login-content > .form-container > form > .input-wrapper > div > input {
+    width: 100%;
+    padding: 11px 15px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 0px 5px 0px #00000021;
+}
+
+.login-content > .form-container > form > .input-wrapper > div > svg {
+    position: absolute;
+    right: 15px;
+    top: 17px;
+}
+
+.login-content > .form-container > form > .forget-password {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.login-content > .form-container > form > .forget-password > a {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.8px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.login-content > .form-container > form > .button-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-content > .form-container > form > .button-container > button {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
+}
+
+.login-content > .social-media-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.login-content > .social-media-container > .separator {
+    width: 100%;
+    display: flex;
+    align-items: center;
+ 
+}
+
+hr {
+    border: 1px solid #DFDFDF;
+}
+
+.login-content > .social-media-container > .separator > div:nth-child(2) {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.09em;
+    text-align: left;
+    color: #ACADAC;
+}
+
+.login-content > .social-media-container > .media-butttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-content > .social-media-container > .media-butttons > button {
+    width: 97px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid #DDDFDD;
+    background: #F8FAFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

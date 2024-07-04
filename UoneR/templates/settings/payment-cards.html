@@ -1,0 +1,67 @@
+{% extends "../settings/settings-base.html" %}
+{% load static %}
+
+{% block settings_css %}
+<link rel="stylesheet" href="{% static "UoneR/settings/css/payment-cards.css" %}">
+<link rel="stylesheet" href="{% static 'UoneR/modals/css/payment-cards.css' %}">
+{% endblock settings_css %}
+{% block settings_title %}Payment Cards{% endblock settings_title %}
+
+{% block settings %}
+
+<div class="payment-cards-container">
+    <div class="payment-cards-header">
+        <h4>Saved Cards</h4>
+        <button onclick="openPaymentCardsModal('payment-cards-modal');">
+            <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5 22.5V7.5M7 15H22" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Add New</span>                
+        </button>
+    </div>
+
+    <div class="cards-container">
+        {% for i in range %}
+            <div class="payment-card">
+                <div class="image-action">
+                    <div class="image-container">
+                        <img src="{% static "UoneR/modals/images/payment-card-svg.svg" %}" alt="">
+                    </div>
+                    <div class="actions">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="1.5" width="37" height="37" rx="6.5" stroke="#8EC549" stroke-width="3"/>
+                            <path opacity="0.4" d="M21.7949 28.3373H28.5262" stroke="#8EC549" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9031 12.5646C21.681 11.5735 22.9382 11.6252 23.9304 12.4031L25.3976 13.5537C26.3898 14.3316 26.7413 15.5381 25.9634 16.5314L17.2139 27.6939C16.9215 28.0676 16.475 28.2882 16 28.2935L12.6254 28.3367L11.8612 25.0487C11.7535 24.5874 11.8612 24.1018 12.1536 23.7271L20.9031 12.5646Z" stroke="#8EC549" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path opacity="0.4" d="M19.2637 14.6553L24.324 18.6221" stroke="#8EC549" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.5" y="1.5" width="37" height="37" rx="6.5" stroke="#FF3B30" stroke-width="3"/>
+                            <path d="M26.7135 17.6792C26.7135 17.6792 26.2157 23.8529 25.927 26.4535C25.7895 27.6956 25.0222 28.4234 23.7655 28.4464C21.3739 28.4894 18.9796 28.4922 16.5889 28.4418C15.3798 28.417 14.6254 27.68 14.4907 26.4599C14.2001 23.8364 13.7051 17.6792 13.7051 17.6792" stroke="#FF3B30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M27.9823 14.7196H12.4375" stroke="#FF3B30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24.988 14.7197C24.2684 14.7197 23.6488 14.211 23.5076 13.5061L23.2848 12.3914C23.1473 11.8772 22.6817 11.5215 22.1509 11.5215H18.2707C17.7399 11.5215 17.2743 11.8772 17.1368 12.3914L16.914 13.5061C16.7728 14.211 16.1532 14.7197 15.4336 14.7197" stroke="#FF3B30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                                
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span>XXXX XXXX XXXX 0099</span>
+                    <span>Jenny Lane</span>
+                    <span>10/12</span>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="button-container">
+        <button type="buttom">Save Changes</button>
+    </div>
+</div>
+
+
+
+{% include "../modals/payment-cards.html" %}
+{% endblock settings %}
+
+{% block settings_js %}
+<script src="{% static "UoneR/settings/js/personal-information.js" %}"></script>
+<script src="{% static 'UoneR/modals/js/payment-cards.js' %}"></script>
+{% endblock settings_js %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %} Home {% endblock title %}
+{% block addcss %}
+<link rel="stylesheet" href="{% static "UoneR/includes/pagination.css" %}">
+<link rel="stylesheet" href="{% static "UoneR/dashboard/css/index.css" %}">
+{% endblock addcss %}
+
+
+{% block content %}
+
+<div class="shows-container">
+    <div class="shows-heading">
+        <h4>Shows</h4>
+    </div>
+
+    <div class="shows-list-container">
+        
+        {% for i in range %}
+            <div class="show-content cursor-pointer">
+                <span>The Carpet/Rug Show</span>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" xml:space="preserve" version="1.1" viewBox="0 0 24 24">
+                        <image width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKnSURBVHgBzVVNchJREO5+CBjKMnMEPIGwjCRxZgduxBMIJ9CBmCpXkJULg8gJEk4AK6F0AWV+XAZPkLmBuFEgzLSv3xCcGRmGTarsqlfvTb/u/rpf/wzAHRNuKlgf6FoqEU/z+dfsxqobw/EmehhldPt+6hU5VJKf6cD1iIBaYjbpmmvAQgHen+X1mMATj2ELSC6XNKmZueXPYf7iMPdltDHA8WWhKAg6C4Hu3KHWm73+0CvT/JZPkw11QHypGIJKlZ1+OxLg3SCfTsbxSt5oRGBWd3sfYQ01zvJ1FFiTx/F0Rtm3Rt/y3ougQiIhaso40FGUcabqXr8ODrTkUUsm1ZOGR6C8T+C1PFqVXO9RULh5WWgSQIaI2tVc/3TJHxQ1SkxZT7MdMrzP6YsgEcci7/JpWrCCyAFdJlpHwJPGxbOlt6bRHctKUzoCMePVEf5wSF06RL6KOP5aUMCV3V52DpjlCKVsiSttCU44cgHocSgAIW5DgNi4iEGncV54zd+HuU8j6a2qFiH+9gYhjRc20uEREP10d0cLKqKA57xz88mqUWeynX8aTNqwwiMAN0yMieU7LhLGTaZ/OC/8eBjf4mTyvXWw/7nrMaTz7hB+DwWwEYcKAPGpzytBhnzkNpevWgRDxfPJuA0ncD708SFA0suB5OrBcltHjYt8iStL6g0rT3pGaAQqCqIj3nkONeV7R9hWvSON15Su7equBWCvHQKukjQltzoQQYvulSB0uipisUopdpPkkhxxYr0NFaQm35FKrgWpiblKJnRcq2np4IC9I4SumP4ue+c+G5fzqsTGOeHmjn/IRQIEQdiQnJYGT8sF/zrKeCSAB4RzwbU/dmwoH+z3ujwm7j2YjMzs+l/nxv/k27nPyTRz/TLcBTWvdI0X/E/0B9O6Mfv9n/JpAAAAAElFTkSuQmCC"/>
+                    </svg>                    
+                    <span>Istanbul - Turkiye</span>                    
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    {% include "includes/pagination.html" %}
+
+</div>
+
+{% include "../includes/services-container.html" %}
+
+{% endblock content %}
+
+{% block addjs %}{% endblock addjs %}

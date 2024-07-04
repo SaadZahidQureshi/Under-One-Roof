@@ -1,0 +1,76 @@
+.base-settings-container {
+    width: 100%;
+    margin: 30px 0px;
+}
+
+.base-settings-container > div > .side-bar, 
+.base-settings-container > div > .settings-main-content {
+    height: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px 4px #0000000F;
+}
+
+.base-settings-container > div .side-bar > .nav-bar {
+    margin-top: 20px;  
+    padding: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.base-settings-container > div .side-bar > .nav-bar > li {
+    list-style: none;
+    width: 100%;
+}
+
+.base-settings-container > div .side-bar > .nav-bar > li > div {
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #454545;
+}
+
+.base-settings-container > div .side-bar > .nav-bar > li > div > span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: left;
+    color: inherit;
+}
+
+.base-settings-container > div .side-bar > .nav-bar > li > div > svg path {
+    stroke: #454545 ;
+}
+
+.base-settings-container > div .side-bar > .nav-bar > li:last-child > div > span {
+    color: #FF3B30 !important;
+}
+
+.base-settings-container > div .side-bar > .nav-bar > li:last-child > div > svg path {
+    stroke: #FF3B30 !important;
+}
+
+
+.base-settings-container > div .side-bar > .nav-bar > li.active > div {
+    padding: 15px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px 4px #0000000F;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+}
+
+.base-settings-container > div .side-bar > .nav-bar > li.active > div > span {
+    color: inherit;
+}
+
+.base-settings-container > div .side-bar > .nav-bar > li.active > div > svg path {
+    stroke: var(--primary-color);
+}

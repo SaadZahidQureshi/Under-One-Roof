@@ -1,0 +1,13 @@
+.main-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0px 60px;
+}
+
+@media (max-width: 768px) {
+    .main-content{
+        padding: 0px 30px;
+    }
+}

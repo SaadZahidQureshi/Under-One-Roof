@@ -1,0 +1,202 @@
+.show-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.show-container > table {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid  #EEF2F7;
+}
+
+.show-container > table > thead > tr {
+    background-color: #EEF2F7;
+}
+
+.show-container > table > thead > tr > th{
+    padding: 13px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    color: #000000;
+}
+
+.show-container > table > thead > tr > th:first-child {
+    border-radius: 10px 0px 0px 0px;
+}
+
+.show-container > table > thead > tr > th:last-child {
+    border-radius: 0px 10px 0px 0px;
+}
+
+.show-container > table > tbody > tr {
+    border-bottom: 1px solid #EEF2F7;
+}
+
+.show-container > table > tbody > tr > td {
+    padding: 13px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: center;
+    color: #454545;
+}
+
+.show-container > table > tbody > tr > td > .location {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-container > table > tbody > tr > td > .location a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.show-container > table > tbody > tr > td > .location a > span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+    color: inherit;
+}
+
+.show-container > table > tbody > tr > td > .status{
+    width: fit-content;
+    margin: auto;
+}
+
+.show-container > table > tbody > tr > td > .status > button.show {
+    display: flex !important;
+}
+
+.show-container > table > tbody > tr > td > .status > button {
+    width: 140px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 15px;
+    background: #EDF5E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+button.inactive {
+    background: #FF3B3026 !important;
+}
+
+svg.inactive path{
+    fill: #FF3B30 !important;
+}
+
+span.inactive {    
+    color: #FF3B30 !important;
+}
+
+.show-container > table > tbody > tr > td > .status > button > span{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu {
+    width: 100%;
+    padding: 0px;
+    border-radius: 8px;
+}
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:first-child {
+    border-radius: 8px 8px 0px 0px;
+}
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label {
+    width: 140px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > input {
+    appearance: none;
+    border: 1px solid var(--primary-color);
+    width: 15px;
+    height: 15px;
+    content: none;
+    outline: none;
+    margin: 0;
+    border-radius: 4px;
+}
+
+.show-container > table > tbody > tr > td > .status >.dropdown-menu > .dropdown-item > label > input[type="radio"]:checked {
+    appearance: none;
+    outline: none;
+    padding: 0;
+    content: none;
+    border: none;
+}
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > input[type="radio"]:checked::before{
+    position: absolute;
+    width: 15px;
+    height: 15px;  
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    content: url('/static/UoneR/order/images/radio-check.svg') !important;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+    color: #6A6767;
+}
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active >  label > span {
+    color: #FFFFFF !important;
+}
+
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active >  label > input[type="radio"]:checked::before {
+    background-color: #FFFFFF;
+}
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.show-container > table > tbody > tr > td > .status >.dropdown-menu > .dropdown-item:hover >  label > span {
+    color: #FFFFFF !important;
+}
+
+.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:hover >  label > input[type="radio"] {
+    background-color: #FFFFFF;
+}

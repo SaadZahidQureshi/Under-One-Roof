@@ -1,0 +1,145 @@
+{% load static %}
+
+<div class="modal fade" id="payment-cards-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="addUserLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center ">
+            <div class="back-svg" onclick="toggleModal('add-card-container', 'cards-list-container');">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.891249 8.40697C0.877523 8.29803 0.877523 8.18779 0.891249 8.07885V8.0001C0.891857 7.86074 0.91857 7.72274 0.970001 7.59322C1.02448 7.44588 1.10946 7.3117 1.21937 7.19947L7.78187 0.636973C8.02902 0.389824 8.36423 0.250977 8.71375 0.250977C9.06327 0.250977 9.39848 0.389824 9.64562 0.636973C9.89277 0.884121 10.0316 1.21933 10.0316 1.56885C10.0316 1.91837 9.89277 2.25357 9.64562 2.50072L5.28813 6.6876H17.875C18.2231 6.6876 18.5569 6.82588 18.8031 7.07202C19.0492 7.31816 19.1875 7.652 19.1875 8.0001C19.1875 8.34819 19.0492 8.68203 18.8031 8.92818C18.5569 9.17432 18.2231 9.3126 17.875 9.3126H5.28813L9.61937 13.6307C9.74239 13.7527 9.84004 13.8979 9.90667 14.0578C9.9733 14.2178 10.0076 14.3893 10.0076 14.5626C10.0076 14.7359 9.9733 14.9074 9.90667 15.0674C9.84004 15.2273 9.74239 15.3725 9.61937 15.4945C9.49736 15.6175 9.3522 15.7151 9.19226 15.7818C9.03232 15.8484 8.86077 15.8827 8.6875 15.8827C8.51423 15.8827 8.34268 15.8484 8.18274 15.7818C8.0228 15.7151 7.87764 15.6175 7.75563 15.4945L1.19313 8.93197C1.08718 8.81665 1.00272 8.6833 0.94375 8.53822C0.918476 8.498 0.900688 8.45353 0.891249 8.40697Z" fill="#8EC549"/>
+                </svg>                    
+            </div>
+            <form class="{% if active_sidebar == 'payment_cards' %}hide{% endif %} main-content-container cards-list-container">
+                <div class="">
+                {% csrf_token %}
+                    <div class="modal-header border-bottom-0 w-100 justify-content-center">
+                        <span class="add-user-modal-header-text" id="add-user-modal-header-text">Choose Payment Card</span>
+                        <span>Select any card or add new one!</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="body-header">
+                            <span>Saved Cards</span>
+                            <button type="button" onclick="toggleModal('cards-list-container', 'add-card-container');">
+                                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5002 16.6899V5.31055M5.81055 11.0002H17.1899" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                                <span>Add New</span>
+                            </button>
+                        </div>
+
+                        <div class="cards-container">
+                            <div class="card">
+                                <div class="details">
+                                    <div class="svg">
+                                        <img src="{% static 'UoneR/modals/images/payment-card-svg.svg'%}" alt="">
+                                    </div>
+                                    <div class="actions">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="34" height="34" rx="7" stroke="#8EC549" stroke-width="2"/>
+                                            <path opacity="0.4" d="M19.6147 25.5033H25.6729" stroke="#8EC549" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.8122 11.308C19.5123 10.416 20.6438 10.4625 21.5368 11.1627L22.8573 12.1982C23.7503 12.8983 24.0666 13.9842 23.3665 14.8781L15.4919 24.9244C15.2288 25.2607 14.8269 25.4592 14.3994 25.464L11.3623 25.5029L10.6745 22.5437C10.5776 22.1285 10.6745 21.6915 10.9376 21.3543L18.8122 11.308Z" stroke="#8EC549" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path opacity="0.4" d="M17.3374 13.1895L21.8917 16.7596" stroke="#8EC549" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="34" height="34" rx="7" stroke="#FF3B30" stroke-width="2"/>
+                                            <path d="M24.7145 15.6792C24.7145 15.6792 24.2167 21.8529 23.928 24.4535C23.7905 25.6956 23.0232 26.4234 21.7665 26.4464C19.3749 26.4894 16.9806 26.4922 14.5899 26.4418C13.3808 26.417 12.6264 25.68 12.4916 24.4599C12.2011 21.8364 11.7061 15.6792 11.7061 15.6792" stroke="#FF3B30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M25.9823 12.7196H10.4375" stroke="#FF3B30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M22.987 12.7197C22.2675 12.7197 21.6478 12.211 21.5066 11.5061L21.2839 10.3914C21.1464 9.87715 20.6807 9.52148 20.15 9.52148H16.2697C15.739 9.52148 15.2733 9.87715 15.1358 10.3914L14.913 11.5061C14.7719 12.211 14.1522 12.7197 13.4326 12.7197" stroke="#FF3B30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                                                                
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <span class="card-number">XXXX XXXX XXXX 0099</span>
+                                    <span class="card-holder">Jenny Lane</span>
+                                    <span class="card-expiry">10/12</span>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="details">
+                                    <div class="svg">
+                                        <img src="{% static 'UoneR/modals/images/payment-card-svg.svg'%}" alt="">
+                                    </div>
+                                    <div class="actions">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="34" height="34" rx="7" stroke="#8EC549" stroke-width="2"/>
+                                            <path opacity="0.4" d="M19.6147 25.5033H25.6729" stroke="#8EC549" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.8122 11.308C19.5123 10.416 20.6438 10.4625 21.5368 11.1627L22.8573 12.1982C23.7503 12.8983 24.0666 13.9842 23.3665 14.8781L15.4919 24.9244C15.2288 25.2607 14.8269 25.4592 14.3994 25.464L11.3623 25.5029L10.6745 22.5437C10.5776 22.1285 10.6745 21.6915 10.9376 21.3543L18.8122 11.308Z" stroke="#8EC549" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path opacity="0.4" d="M17.3374 13.1895L21.8917 16.7596" stroke="#8EC549" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="34" height="34" rx="7" stroke="#FF3B30" stroke-width="2"/>
+                                            <path d="M24.7145 15.6792C24.7145 15.6792 24.2167 21.8529 23.928 24.4535C23.7905 25.6956 23.0232 26.4234 21.7665 26.4464C19.3749 26.4894 16.9806 26.4922 14.5899 26.4418C13.3808 26.417 12.6264 25.68 12.4916 24.4599C12.2011 21.8364 11.7061 15.6792 11.7061 15.6792" stroke="#FF3B30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M25.9823 12.7196H10.4375" stroke="#FF3B30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M22.987 12.7197C22.2675 12.7197 21.6478 12.211 21.5066 11.5061L21.2839 10.3914C21.1464 9.87715 20.6807 9.52148 20.15 9.52148H16.2697C15.739 9.52148 15.2733 9.87715 15.1358 10.3914L14.913 11.5061C14.7719 12.211 14.1522 12.7197 13.4326 12.7197" stroke="#FF3B30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                                                                
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <span class="card-number">XXXX XXXX XXXX 0099</span>
+                                    <span class="card-holder">Jenny Lane</span>
+                                    <span class="card-expiry">10/12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="error-div">
+                        <small class="create-error-msg input-error-msg"></small>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0">
+                    <button type="button" data-bs-dismiss="modal">Cancel</button>
+                    <button class="submit-btn" type="button" onclick="openCongratsModal('congrats-modal')">
+                        <span class="spinner-border spinner-border-sm hide" role="status" aria-hidden="true"></span>
+                        <span class="btn-text">Place Order</span>
+                    </button>
+                </div>
+            </form>
+            <form class="main-content-container add-card-container {% if active_sidebar != 'payment_cards' %}hide{% endif %}">
+                <div class="">
+                {% csrf_token %}
+                    <div class="modal-header border-bottom-0 w-100 justify-content-center">
+                        <span class="add-user-modal-header-text" id="add-user-modal-header-text">Add Card</span>
+                        <span>Add a splash of excitement to our list below!</span>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="input-wrapper ">
+                            <label for="card-number">Card Number</label>
+                            <div>
+                                <input type="number" name="card-number" id="card-number" placeholder="xxxx xxxx xxxx xxxx" />
+                            </div>
+                        </div>
+                        <div class="input-wrapper ">
+                            <label for="name">Name on Card</label>
+                            <div>
+                                <input type="text" name="name" id="name" placeholder="Alex Hails" />
+                            </div>
+                        </div>
+                        <div class="input-wrapper ">
+                            <label for="expiry-date">Expiry Date</label>
+                            <div>
+                                <input type="text" name="expiry-date" id="expiry-date" placeholder="12/9" />
+                            </div>
+                        </div>
+                        <div class="input-wrapper ">
+                            <label for="cvv">CVV</label>
+                            <div>
+                                <input type="text" cvv="cvv" id="cvv" placeholder="000" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="error-div">
+                        <small class="create-error-msg input-error-msg"></small>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0"> 
+                    <button data-bs-dismiss="modal">Cancel</button>
+                    <button class="submit-btn" type="button" >
+                        <span class="spinner-border spinner-border-sm hide" role="status" aria-hidden="true"></span>
+                        <span class="btn-text">Save</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<input type="hidden" class="payment-cards-modal" data-bs-toggle="modal" data-bs-target="#payment-cards-modal" />
