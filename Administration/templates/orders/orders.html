@@ -1,0 +1,91 @@
+{% extends "admin-base.html" %}
+{% load static %}
+
+{% block addcss %}
+<link rel="stylesheet" href="{% static "UoneR/modals/css/delete.css" %}">
+<link rel="stylesheet" href="{% static "administration/modals/css/order-details.css" %}">
+<link rel="stylesheet" href="{% static "administration/include/css/pagination.css" %}">
+<link rel="stylesheet" href="{% static "administration/order/css/orders.css" %}">
+{% endblock addcss %}
+{% block title %}Orders{% endblock title %}
+
+{% block content %}
+<div class="orders-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Order No</th>
+                <th>Placed Date & Time</th>
+                <th>Show</th>
+                <th>Status</th>
+                <th>Manage</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range %}
+                <tr data-row="{{i}}">
+                    <td >0123456</td>
+                    <td>10-1-2024, 12:00 PM</td>
+                    <td>Expo Center</td>
+                    <td>
+                        <div class="status dropdown">
+                            <button class="dropdown-btn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="selected-filter-text">Completed</span>
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.18912 10.4463C8.19537 10.4388 8.19788 10.4288 8.20412 10.4213L12.5679 5.60002C12.8116 5.32877 12.8116 4.88877 12.5679 4.61752C12.5654 4.61502 12.5629 4.61377 12.5604 4.61252C12.5061 4.54684 12.4382 4.4938 12.3614 4.45709C12.2845 4.42039 12.2005 4.40091 12.1154 4.40002H3.38663C3.29989 4.40143 3.21452 4.42186 3.13655 4.45987C3.05858 4.49788 2.9899 4.55256 2.93538 4.62002L2.93288 4.61752C2.81491 4.75401 2.75 4.92838 2.75 5.10877C2.75 5.28917 2.81491 5.46354 2.93288 5.60002L7.30663 10.4463C7.36107 10.5101 7.42872 10.5614 7.5049 10.5965C7.58108 10.6316 7.66398 10.6498 7.74788 10.6498C7.83177 10.6498 7.91467 10.6316 7.99085 10.5965C8.06703 10.5614 8.13468 10.5101 8.18912 10.4463Z" fill="#6B9046"/>
+                                </svg>                                    
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <label for="Completed-{{i}}">
+                                        <input type="radio" checked name="order-filter-{{i}}" id="Completed-{{i}}" onclick="selectFilter(this, 'Completed')">
+                                        <span>Completed</span>
+                                    </label>
+                                </li>
+                                <li class="dropdown-item">
+                                    <label for="Placed-{{i}}">
+                                        <input type="radio"  name="order-filter-{{i}}" id="Placed-{{i}}" onclick="selectFilter(this, 'Placed')">
+                                        <span>Placed</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="view-details">
+                        <button class="view-details-btn" onclick="openOrderDetailsModal('order-details-modal')">View Details</button>
+                    </td>
+                    <td>
+                        <div class="">
+                            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1.25" y="1.5" width="28" height="28" rx="5" stroke="#8EC549" stroke-width="2"/>
+                                <path opacity="0.4" d="M16.5956 21.7526H21.644" stroke="#8EC549" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9268 9.92323C16.5103 9.17985 17.4531 9.21865 18.1973 9.8021L19.2977 10.665C20.0419 11.2485 20.3055 12.1534 19.7221 12.8983L13.1599 21.2702C12.9406 21.5504 12.6058 21.7159 12.2495 21.7199L9.71856 21.7523L9.1454 19.2863C9.06465 18.9403 9.1454 18.5761 9.36469 18.2951L15.9268 9.92323Z" stroke="#8EC549" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path opacity="0.4" d="M14.6979 11.4911L18.4931 14.4662" stroke="#8EC549" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg class="cursor-pointer" onclick="openDeleteModal('delete-modal')" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1.25" y="1.5" width="28" height="28" rx="5" stroke="#FF3B30" stroke-width="2"/>
+                                <path d="M20.8122 13.1792C20.8122 13.1792 20.3974 19.3529 20.1567 21.9535C20.0422 23.1956 19.4028 23.9234 18.3555 23.9464C16.3625 23.9894 14.3672 23.9922 12.375 23.9418C11.3674 23.917 10.7387 23.18 10.6265 21.9599C10.3843 19.3364 9.9718 13.1792 9.9718 13.1792" stroke="#FF3B30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21.8688 10.2197H8.91479" stroke="#FF3B30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.3728 10.2197C18.7731 10.2197 18.2567 9.71098 18.1391 9.00607L17.9535 7.8914C17.8389 7.37715 17.4508 7.02148 17.0085 7.02148H13.775C13.3327 7.02148 12.9447 7.37715 12.8301 7.8914L12.6444 9.00607C12.5268 9.71098 12.0104 10.2197 11.4108 10.2197" stroke="#FF3B30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                                        
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% include "../include/pagination.html" %}
+</div>
+
+{% include "../modals/delete.html" %}
+{% include "../modals/order-details.html" %}
+
+{% endblock content %}
+
+{% block addjs %}
+<script src="{% static "administration/modals/js/delete.js" %}"></script>
+<script src="{% static "administration/modals/js/order-details.js" %}"></script>
+<script src="{% static "administration/order/js/orders.js" %}"></script>
+{% endblock addjs %}

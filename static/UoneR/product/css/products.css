@@ -338,3 +338,13 @@ input[name="subscription_duration_radio"]:checked + .duration-radio-label {
         gap: 20px;
     }
 }
+
+@media (max-width: 576px) {
+    .product-filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .subscription-duration-group .duration-radio-btn {
+        width: 120px;
+    }
+}

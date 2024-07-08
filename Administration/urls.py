@@ -21,6 +21,10 @@ urlpatterns = [
     # categories urls
     path('categories/', views.categories, name="categories"),
     
+    # orders urls
+    path('orders/', views.orders, name="orders"),
     
+    # profile urls
+    path('profile-settings/', views.profile_settings, name="profile_settings"),
     
 ]

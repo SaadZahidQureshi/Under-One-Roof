@@ -137,3 +137,52 @@
 .sidebar > .footer > .sidebar-menu > .sidebar-item:hover > div > span {
     color: #FFFFFF;
 }
+
+
+.sidebar > .footer > .dropdown > .dropdown-menu.show{
+    transform: translate(250px, 0px) !important;
+}
+
+.sidebar > .footer > .dropdown > .dropdown-menu {
+    padding: 0px;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.sidebar > .footer > .dropdown > .dropdown-menu > .dropdown-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.sidebar > .footer > .dropdown > .dropdown-menu > .dropdown-item > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sidebar > .footer > .dropdown > .dropdown-menu > .dropdown-item > div > span{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.2px;
+    text-align: left;
+    color: #000000;
+}
+
+.sidebar > .footer > .dropdown > .dropdown-menu > .dropdown-item:active {
+    background-color: var(--primary-color);
+}
+
+.sidebar > .footer > .dropdown > .dropdown-menu > .dropdown-item:hover {
+    background-color: var(--primary-color);
+}
+
+.sidebar > .footer > .dropdown > .dropdown-menu > .dropdown-item:hover > div > span{
+    color: #FFFFFF;
+}
+
+.sidebar > .footer > .dropdown > .dropdown-menu > .dropdown-item:hover > div svg path {
+    fill: #FFFFFF;
+}

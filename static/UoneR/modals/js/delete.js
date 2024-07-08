@@ -3,7 +3,6 @@ function openDeleteModal(modalId) {
     let modal = document.querySelector(`#${modalId}`);
     let form = modal.querySelector("form");
     form.setAttribute("onsubmit", `addNewUserForm(event);`);
-    document.querySelector(".back-svg").classList.add('hide');
     modal.addEventListener('hidden.bs.modal', event => {
         form.reset();
         form.removeAttribute("onsubmit");

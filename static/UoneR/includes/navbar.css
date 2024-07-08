@@ -525,7 +525,7 @@ nav .logo-container {
 }
 
 #header-div .navbar button:hover > span:last-child {
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     color: #000000;
 }
 

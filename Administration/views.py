@@ -34,10 +34,23 @@ def product_types(request):
     context['range'] = range(0, 5)
     return render(request, 'product-type/product-types.html', context)
 
-
 # categories views
 def categories(request):
     context = {}
     context['active_sidebar'] = 'categories'
     context['range'] = range(0, 5)
     return render(request, 'category/categories.html', context)
+
+# orders views
+def orders(request):
+    context = {}
+    context['active_sidebar'] = 'orders'
+    context['range'] = range(0, 5)
+    return render(request, 'orders/orders.html', context)
+
+# profile_settings views
+def profile_settings(request):
+    context = {}
+    context['active_sidebar'] = 'profile_settings'
+    context['range'] = range(0, 5)
+    return render(request, 'profile/profile-setting.html', context)

@@ -12,6 +12,17 @@
     gap: 15px;
 }
 
+.navbar > div:last-child.show,
+.navbar form.show  {
+    display: flex !important;
+}
+
+.navbar form{
+    display: flex ;
+    gap: 10px;
+    align-items: center;
+}
+
 .navbar .search-bar {
     width: 345px;
     height: 40px;
@@ -25,6 +36,7 @@
     padding: 7px 15px;
     border-radius: 10px;
     width: 100%;
+    height: 100%;
     padding-left: 35px;
 
     font-size: 16px;
@@ -39,6 +51,207 @@
     left: 7px;
 }
 
+.navbar .status-filter {
+    width: 240px;
+    height: 40px;
+    position: relative;
+}
+
+.navbar .status-filter {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .status-filter > button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 15px;
+
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 0px 5px 0px #00000021;
+    border-radius: 10px;
+}
+
+.navbar .status-filter > button.show {
+    display: flex !important;
+}
+
+.navbar .status-filter > button  > span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+    color: #6A6767;
+}
+
+
+.navbar .status-filter >  .dropdown-menu {
+    width: 100%;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+.navbar .status-filter >  .dropdown-menu > .dropdown-item:first-child {
+    border-radius: 8px 8px 0px 0px;
+}
+
+.navbar .status-filter >  .dropdown-menu > .dropdown-item:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.navbar .status-filter >  .dropdown-menu > .dropdown-item > label {
+    width: 140px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .status-filter >  .dropdown-menu > .dropdown-item > label > input {
+    appearance: none;
+    border: 1px solid var(--primary-color);
+    width: 15px;
+    height: 15px;
+    content: none;
+    outline: none;
+    margin: 0;
+    border-radius: 4px;
+}
+
+.navbar .status-filter > .dropdown-menu > .dropdown-item > label > input[type="radio"]:checked {
+    appearance: none;
+    outline: none;
+    padding: 0;
+    content: none;
+    border: none;
+}
+
+.navbar .status-filter >  .dropdown-menu > .dropdown-item > label > input[type="radio"]:checked::before{
+    position: absolute;
+    width: 15px;
+    height: 15px;  
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    content: url('/static/UoneR/order/images/radio-check.svg') !important;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .status-filter >  .dropdown-menu > .dropdown-item > label > span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+    color: #6A6767;
+}
+
+.navbar .status-filter >  .dropdown-menu > .dropdown-item:active {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.navbar .status-filter >  .dropdown-menu > .dropdown-item:active >  label > span {
+    color: #FFFFFF !important;
+}
+
+
+.navbar .status-filter >  .dropdown-menu > .dropdown-item:active >  label > input[type="radio"]:checked::before {
+    background-color: #FFFFFF;
+}
+
+.navbar .status-filter >  .dropdown-menu > .dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.navbar .status-filter > .dropdown-menu > .dropdown-item:hover >  label > span {
+    color: #FFFFFF !important;
+}
+
+.navbar .status-filter >  .dropdown-menu > .dropdown-item:hover >  label > input[type="radio"] {
+    background-color: #FFFFFF;
+}
+
+.navbar .date-filter {
+    width: 260px;
+    height: 40px;
+    position: relative;
+}
+
+.navbar .date-filter.hide {
+    display: none !important;
+}
+
+.navbar .date-filter {
+    display: flex !important;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .date-filter > input {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 15px;
+
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 0px 5px 0px #00000021;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+    color: #6A6767;
+}
+
+.navbar .date-filter > svg {
+    position: absolute;
+    right: 15px;
+}
+
+.lightpick__day.is-start-date.is-in-range, .lightpick__day.is-end-date.is-in-range.is-flipped,
+.lightpick__day.is-end-date.is-in-range, .lightpick__day.is-start-date.is-in-range.is-flipped,
+.lightpick__previous-action,
+.lightpick__next-action {
+    background-color: #8EC549;
+    color: #FFFFFF;
+}
+
+.lightpick__day.is-in-range {
+    background-color: #D2E8B6;
+}
+
+.lightpick__day.is-start-date,
+.lightpick__day.is-end-date, 
+.lightpick__day.is-start-date:hover, 
+.lightpick__day.is-end-date:hover {
+    background: #8EC549;
+}
+
+.lightpick__day.is-in-range.is-start-date:hover,
+.lightpick__day.is-in-range.is-end-date:hover {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%8EC549' cx='16' cy='16' r='16'/%3E%3C/svg%3E");
+}
+
+.lightpick__day.is-in-range:hover {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%23D2E8B6' cx='16' cy='16' r='16'/%3E%3C/svg%3E");
+}
+
+.lightpick__day.is-start-date.is-end-date {
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle fill='%23D2E8B6' cx='16' cy='16' r='16'/%3E%3C/svg%3E");
+}
 .navbar .notification-card > button{
     border: none;
     background-color: var(--primary-color);

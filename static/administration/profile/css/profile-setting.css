@@ -1,0 +1,151 @@
+.profile-settings-container {
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.settings-main-content-container {
+    width: 465px;
+}
+
+.settings-main-content-container > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.settings-main-content-container > form .profile-image-container {
+    width: 100px;
+    height: 100px;
+    /* overflow: hidden; */
+}
+
+.settings-main-content-container > form .profile-image-container > label {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.settings-main-content-container > form .profile-image-container > label > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+    border: 2px solid var(--primary-color);
+}
+
+.settings-main-content-container > form .profile-image-container > label > .edit-svg {
+    position: absolute;
+    /* z-index: 33333; */
+    bottom: 0;
+    right: 0px;
+    width: 35px;
+    height: 35px;
+}
+
+.settings-main-content-container > form > .title-image-container > span {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
+    color: #000000;
+}
+
+.settings-main-content-container > form {
+    width: 100%;
+}
+.settings-main-content-container > form > .inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+}
+
+.settings-main-content-container > form > .inputs-container > .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.settings-main-content-container > form > .inputs-container > .input-wrapper input:focus-visible {    
+    outline: 1px solid var(--primary-color)
+}
+
+.settings-main-content-container > form > .inputs-container > .input-wrapper.password > div{
+    width: 100%;
+    position: relative;
+}
+
+.settings-main-content-container > form > .inputs-container > .input-wrapper.password > div > input{
+    width: 100%;
+    padding: 12px 15px;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 0px 5px 0px #00000021;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    color: #6A6767;
+}
+
+.settings-main-content-container > form > .inputs-container > .input-wrapper.password > div > svg {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.settings-main-content-container > form > .inputs-container > .input-wrapper > label {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
+    color: #000000;
+}
+
+.settings-main-content-container > form > .inputs-container > .input-wrapper > input {
+    width: 100%;
+    padding: 12px 15px;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 0px 5px 0px #00000021;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    color: #6A6767;
+}
+
+.settings-main-content-container > form > .inputs-container > .input-wrapper > input:focus-visible {
+    outline-color: var(--primary-color);
+}
+
+.settings-main-content-container > form > .button-container {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.settings-main-content-container > form > .button-container > button {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 10px 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+}
+
