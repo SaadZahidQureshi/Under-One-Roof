@@ -1,0 +1,367 @@
+.back-svg {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 11px 4px #0000000F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+}
+
+.main-content-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#add-type-modal .modal-dialog {
+    max-width: unset;
+    width: 977px;
+    height: 654px;
+}
+
+#add-type-modal .modal-header {
+    padding: 0!important;
+    border-radius: 15px!important;
+
+}
+
+#add-type-modal .modal-content {
+    padding: 30px 134px;
+    /* height: 600px; */
+    width: 900px;
+}
+
+#add-type-modal .modal-footer,
+#add-type-modal .modal-content {
+    border-radius: 15px!important;
+    width: 100%;
+    /* height: 100%; */
+}
+
+#add-type-modal .modal-header {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#add-type-modal .modal-header > span:first-child {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    text-align: center;
+    color: #000000;
+}
+
+#add-type-modal .modal-header > span:last-child {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: center;
+    color: #313131;
+}
+
+#add-type-modal .modal-body {
+    padding: 0px!important;
+}
+
+.add-card-container .modal-body {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.add-card-container .modal-body .input-wrapper {
+    width: 48% !important;
+}
+
+#add-type-modal .modal-body .input-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    width: 100%;
+    align-items: unset;
+}
+
+#add-type-modal .modal-body .input-wrapper label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.8px;
+    text-align: left    ;
+    color: #000000;
+}
+
+#add-type-modal .modal-body .input-wrapper.add-ons,
+#add-type-modal .modal-body .input-wrapper.add-ons-cotnainer {
+    width: 100% !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+
+#add-type-modal .modal-body .input-wrapper.add-ons-cotnainer {
+    flex-direction: row !important;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 0px 5px 0px #00000021;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
+    height: 330px;
+    overflow: auto;
+}
+
+.add-ons-cotnainer {
+    counter-reset: mycounter;
+}
+
+.addon-item .add-on-counter::before {
+    counter-increment: mycounter;
+    content: "Add-on # "counter(mycounter) ;
+} 
+
+#add-type-modal .modal-body .input-wrapper.add-ons-cotnainer > div {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    width: 48%;
+}
+
+#add-type-modal .modal-body .input-wrapper.add-ons-cotnainer > div > .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#add-type-modal .modal-body .input-wrapper.add-ons-cotnainer > div > .body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #F8FAFC;
+    border: 1px solid #ECECEC;
+    border-radius: 10px;
+    padding: 8px;
+    height: 265px;
+    overflow-y: auto;
+}
+
+#add-type-modal .modal-body .input-wrapper.add-ons-cotnainer > div > .body > .input-wrapper.name {
+    width: 100% !important;
+}
+
+#add-type-modal .modal-body .input-wrapper.add-ons-cotnainer > div > .body > .input-wrapper.options {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#add-type-modal .modal-body .input-wrapper.add-ons-cotnainer > div > .body > .input-wrapper.options > div:first-child {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#add-type-modal .modal-body .input-wrapper.add-ons-cotnainer > div > .body > .input-wrapper.options > div:last-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#add-type-modal .modal-body .input-wrapper.add-ons-cotnainer > div > .body > .input-wrapper.options > div:last-child .input-wrapper {
+    width: 100% !important;
+    position: relative;
+}
+
+#add-type-modal .modal-body .input-wrapper.add-ons-cotnainer > div > .body > .input-wrapper.options > div:last-child .input-wrapper > svg {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#add-type-modal .modal-body .input-wrapper > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#add-type-modal .modal-body .input-wrapper > div input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 0px 5px 0px #00000021;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+}
+
+/* dropdown */
+
+#add-type-modal .modal-body .input-wrapper.status > div {
+    position: relative;
+}
+
+#add-type-modal .modal-body .input-wrapper.status > div svg{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    left: unset;
+}
+
+#add-type-modal .modal-body .input-wrapper.status > div .dropdown-menu {
+    width: 100%;
+    padding: 0px;
+    border-radius: 8px;
+}
+
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:first-child {
+    border-radius: 8px 8px 0px 0px;
+}
+
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item > label {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item > label > input {
+    appearance: none;
+    border: 1px solid var(--primary-color);
+    width: 15px;
+    height: 15px;
+    content: none;
+    outline: none;
+    margin: 0;
+    border-radius: 4px;
+    padding: unset;
+}
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item > label > input[type="radio"]:checked {
+    appearance: none;
+    outline: none;
+    padding: 0;
+    content: none;
+    border: none;
+}
+
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item > label > input[type="radio"]:checked::before{
+    position: absolute;
+    width: 15px;
+    height: 15px;  
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    content: url('/static/UoneR/order/images/radio-check.svg') !important;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item > label > span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+    color: #6A6767;
+}
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:active {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:active >  label > span {
+    color: #FFFFFF !important;
+}
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:active >  label > input[type="radio"]:checked::before {
+    background-color: #FFFFFF;
+}
+
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:hover >  label > span {
+    color: #FFFFFF !important;
+}
+#add-type-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:hover >  label > input[type="radio"] {
+    background-color: #FFFFFF;
+}
+
+/* end dropdown */
+#add-type-modal .error-div {
+    text-align: left;
+    /* padding: 0px 30px; */
+    /* margin-top: 5px; */
+}
+
+
+#add-type-modal .modal-footer {
+    padding: 0px!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 15px; */
+    margin-top: 15px;
+}
+
+#add-type-modal .modal-footer > div > span{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.8px;
+    text-align: center;
+    color: #000000;
+}
+
+#add-type-modal .modal-footer > div > span > a{
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.8px;
+    text-align: center;
+    color: var(--primary-color);
+}
+#add-type-modal .modal-footer > button {
+    width: 25%;
+    height: 34px;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+}
+
+#add-type-modal .modal-footer > button:first-of-type {
+    background: #FF0000;
+}
+
+#add-type-modal .modal-footer > button:last-of-type {
+    background: var(--primary-color);
+}
+
+#add-type-modal .modal-footer > button > span {
+    color: #FFFFFF;
+}
+

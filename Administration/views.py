@@ -26,3 +26,18 @@ def shows(request):
     context['active_sidebar'] = 'shows'
     context['range'] = range(0, 10)
     return render(request, 'show/shows.html', context)
+
+# product_types views
+def product_types(request):
+    context = {}
+    context['active_sidebar'] = 'product_types'
+    context['range'] = range(0, 5)
+    return render(request, 'product-type/product-types.html', context)
+
+
+# categories views
+def categories(request):
+    context = {}
+    context['active_sidebar'] = 'categories'
+    context['range'] = range(0, 5)
+    return render(request, 'category/categories.html', context)

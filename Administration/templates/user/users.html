@@ -34,22 +34,22 @@
                     <td>10 Dec to 31 Dec</td>
                     <td>
                         <div class="status dropdown">
-                            <button data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span>Active</span>
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <button class="inactive" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="inactive selected-filter-text">Inactive</span>
+                                <svg  class="inactive" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.18912 10.4463C8.19537 10.4388 8.19788 10.4288 8.20412 10.4213L12.5679 5.60002C12.8116 5.32877 12.8116 4.88877 12.5679 4.61752C12.5654 4.61502 12.5629 4.61377 12.5604 4.61252C12.5061 4.54684 12.4382 4.4938 12.3614 4.45709C12.2845 4.42039 12.2005 4.40091 12.1154 4.40002H3.38663C3.29989 4.40143 3.21452 4.42186 3.13655 4.45987C3.05858 4.49788 2.9899 4.55256 2.93538 4.62002L2.93288 4.61752C2.81491 4.75401 2.75 4.92838 2.75 5.10877C2.75 5.28917 2.81491 5.46354 2.93288 5.60002L7.30663 10.4463C7.36107 10.5101 7.42872 10.5614 7.5049 10.5965C7.58108 10.6316 7.66398 10.6498 7.74788 10.6498C7.83177 10.6498 7.91467 10.6316 7.99085 10.5965C8.06703 10.5614 8.13468 10.5101 8.18912 10.4463Z" fill="#6B9046"/>
                                 </svg>                                    
                             </button>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-item">
-                                    <label for="active">
-                                        <input type="radio" checked name="order-filter" id="active" onclick="selectFilter(this, 'Active')">
+                                    <label for="red-active-{{i}}">
+                                        <input type="radio"  name="red-order-filter-{{i}}" id="red-active-{{i}}" onclick="selectFilter(this, 'Active')">
                                         <span>Active</span>
                                     </label>
                                 </li>
                                 <li class="dropdown-item">
-                                    <label for="Inactive">
-                                        <input type="radio"  name="order-filter" id="Inactive" onclick="selectFilter(this, 'Inactive')">
+                                    <label for="red-Inactive-{{i}}">
+                                        <input type="radio" checked name="red-order-filter-{{i}}" id="red-Inactive-{{i}}" onclick="selectFilter(this, 'Inactive')">
                                         <span>Inactive</span>
                                     </label>
                                 </li>
@@ -138,4 +138,5 @@
 
 {% block addjs %}
 <script src="{% static "administration/modals/js/delete.js" %}"></script>
+<script src="{% static "administration/user/js/users.js" %}"></script>
 {% endblock addjs %}

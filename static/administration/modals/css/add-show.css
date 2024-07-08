@@ -215,6 +215,105 @@
     line-height: 16.8px;
 }
 
+/* dropdown */
+
+#add-show-modal .modal-body .input-wrapper.status > div {
+    position: relative;
+}
+
+#add-show-modal .modal-body .input-wrapper.status > div svg{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    left: unset;
+}
+
+#add-show-modal .modal-body .input-wrapper.status > div .dropdown-menu {
+    width: 100%;
+    padding: 0px;
+    border-radius: 8px;
+}
+
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:first-child {
+    border-radius: 8px 8px 0px 0px;
+}
+
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item > label {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item > label > input {
+    appearance: none;
+    border: 1px solid var(--primary-color);
+    width: 15px;
+    height: 15px;
+    content: none;
+    outline: none;
+    margin: 0;
+    border-radius: 4px;
+    padding: unset;
+}
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item > label > input[type="radio"]:checked {
+    appearance: none;
+    outline: none;
+    padding: 0;
+    content: none;
+    border: none;
+}
+
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item > label > input[type="radio"]:checked::before{
+    position: absolute;
+    width: 15px;
+    height: 15px;  
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    content: url('/static/UoneR/order/images/radio-check.svg') !important;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item > label > span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+    color: #6A6767;
+}
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:active {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:active >  label > span {
+    color: #FFFFFF !important;
+}
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:active >  label > input[type="radio"]:checked::before {
+    background-color: #FFFFFF;
+}
+
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:hover >  label > span {
+    color: #FFFFFF !important;
+}
+#add-show-modal .modal-body .input-wrapper.status > div  > .dropdown-menu > .dropdown-item:hover >  label > input[type="radio"] {
+    background-color: #FFFFFF;
+}
+
+/* end dropdown */
+
+
+
 #add-show-modal .modal-body .input-wrapper.description,
 #add-show-modal .modal-body .input-wrapper.location {
     width: 100% !important;
@@ -232,6 +331,9 @@
     height: 100%;
 }
 
+#add-show-modal .modal-body .input-wrapper.location > div > input {
+    padding-left: 30px;
+}
 
 #add-show-modal .modal-body .input-wrapper.description > div textarea {
     width: 100%;

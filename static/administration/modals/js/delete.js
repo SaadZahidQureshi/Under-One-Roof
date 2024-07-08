@@ -11,7 +11,7 @@ function openDeleteModal(modalId) {
         document.querySelector('.create-error-msg').innerText = "";
     })
 
-    modal.querySelector('#headline').innerText = 'DeleteAre You Sure?';
+    modal.querySelector('#headline').innerText = 'Are You Sure?';
     modal.querySelector('#info').innerText = 'Are you certain you want to delete this show? Deleting it will result in the permanent loss of all associated information';
 
     document.querySelector(`.${modalId}`).click();

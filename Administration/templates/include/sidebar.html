@@ -14,7 +14,7 @@
             </svg>                
         </div>
         <ul class="sidebar-menu">
-            <li class="sidebar-item {% if active_sidebar == 'shows' %}active{% endif %}" onclick="location.pathname='/administration/shows'">
+            <li class="sidebar-item cursor-pointer {% if active_sidebar == 'shows' %}active{% endif %}" onclick="location.pathname='/administration/shows'">
                 <div class="">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 9.87008V14.8763M12 9.87008L17.1219 6.90798M12 9.87008L6.87808 6.90798M11.5487 3.71872C11.8273 3.56039 12.1727 3.56039 12.4513 3.71872L16.9605 6.28135C17.2328 6.43609 17.4 6.71866 17.4 7.02404V12.1759C17.4 12.4813 17.2328 12.7639 16.9605 12.9186L12.4513 15.4812C12.1727 15.6396 11.8273 15.6396 11.5487 15.4812L7.03947 12.9186C6.7672 12.7639 6.60001 12.4813 6.60001 12.1759V7.02404C6.60001 6.71866 6.7672 6.43609 7.03947 6.28135L11.5487 3.71872Z" stroke="#454545" stroke-width="1.2" stroke-linecap="round"/>
@@ -23,15 +23,15 @@
                     <span>Shows</span>                        
                 </div>
             </li>
-            <li class="sidebar-item {% if active_sidebar == 'product_categories' %}active{% endif %}">
+            <li class="sidebar-item cursor-pointer {% if active_sidebar == 'product_types' %}active{% endif %}" onclick="location.pathname='/administration/product-types'">
                 <div>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.8508 12.6645C19.2539 12.6688 20.3915 13.8266 20.4 15.2589V17.7976C20.3915 19.2312 19.2551 20.3913 17.8508 20.4H15.3639C13.9608 20.3912 12.8267 19.23 12.8225 17.7976V15.2589C12.8225 13.8261 13.9603 12.6645 15.3639 12.6645H17.8508ZM7.17049 12.6645C7.43161 12.636 7.68577 12.7621 7.82508 12.9894C7.96438 13.2166 7.96438 13.5051 7.82508 13.7324C7.68577 13.9596 7.43161 14.0857 7.17049 14.0572H6.14924C5.49783 14.0572 4.96856 14.5939 4.96428 15.2589V17.7658C4.98084 18.4254 5.50298 18.9549 6.14924 18.9675H8.6517C8.96525 18.9696 9.26668 18.8439 9.48913 18.6183C9.71158 18.3928 9.83667 18.0859 9.83667 17.7658V14.0015L9.82603 13.9079C9.81426 13.6588 9.93372 13.4189 10.1439 13.2829C10.3804 13.1298 10.6843 13.1388 10.9117 13.3057C11.1391 13.4725 11.2443 13.7637 11.1775 14.0413V17.7897C11.1775 19.2269 10.0362 20.392 8.62831 20.392H6.14924C4.75351 20.3625 3.62896 19.2145 3.60001 17.7897V15.2589C3.60001 14.5695 3.86883 13.9083 4.34713 13.4216C4.82543 12.9348 5.47386 12.6624 6.14924 12.6645H7.17049ZM17.8508 14.0572H15.3639C14.7138 14.0572 14.1867 14.5952 14.1867 15.2589V17.7976C14.1846 18.117 14.308 18.4239 14.5292 18.6497C14.7504 18.8755 15.0511 19.0014 15.3639 18.9993H17.8508C18.1636 19.0014 18.4642 18.8755 18.6855 18.6497C18.9067 18.4239 19.03 18.117 19.028 17.7976V15.2589C19.028 14.9402 18.9039 14.6345 18.6832 14.4092C18.4624 14.1838 18.163 14.0572 17.8508 14.0572ZM17.8508 3.59998C19.2435 3.63373 20.3634 4.78053 20.3922 6.20234V8.73309C20.4005 9.42118 20.1407 10.0845 19.6699 10.577C19.1992 11.0695 18.556 11.3509 17.882 11.3593H16.8529C16.5043 11.3212 16.2399 11.0209 16.2399 10.663C16.2399 10.3051 16.5043 10.0047 16.8529 9.96663H17.8508C18.1664 9.96453 18.4682 9.83397 18.6892 9.6039C18.9102 9.37382 19.0321 9.06324 19.0279 8.74105V6.20234C19.0195 5.54224 18.4974 5.00921 17.8508 5.00064H15.3639C14.7138 5.00064 14.1867 5.53866 14.1867 6.20234V9.99846L14.1786 10.0858C14.1257 10.4283 13.8334 10.6871 13.4851 10.6829C13.3038 10.6787 13.1317 10.6007 13.0072 10.4661C12.8827 10.3315 12.8162 10.1516 12.8225 9.96663V6.20234C12.8204 5.51289 13.0872 4.85094 13.5641 4.36267C14.0409 3.8744 14.6885 3.59998 15.3639 3.59998H17.8508ZM8.63611 3.59998C10.0422 3.60435 11.1811 4.76691 11.1853 6.20234V8.74105C11.1853 9.43051 10.9165 10.0916 10.4382 10.5784C9.95992 11.0652 9.31149 11.3376 8.63611 11.3355H6.14924C4.74614 11.3311 3.60856 10.1734 3.60001 8.74105V6.20234C3.60852 4.76871 4.74488 3.60866 6.14924 3.59998H8.63611ZM8.63611 5.00064H6.14924C5.833 4.99422 5.52754 5.11799 5.3017 5.34406C5.07585 5.57012 4.94862 5.87945 4.94868 6.20234V8.74105C4.94225 9.06806 5.06667 9.38362 5.29323 9.6149C5.51979 9.84618 5.82891 9.97319 6.14924 9.96663H8.63611C8.95175 9.96453 9.25352 9.83397 9.47451 9.6039C9.6955 9.37382 9.81744 9.06324 9.81328 8.74105V6.20234C9.80903 5.54047 9.28447 5.00498 8.63611 5.00064Z" fill="#454545"/>
                     </svg>
-                    <span>Products Categories</span> 
+                    <span>Products Type</span> 
                 </div>                   
             </li>
-            <li class="sidebar-item {% if active_sidebar == 'categories' %}active{% endif %}">
+            <li class="sidebar-item cursor-pointer {% if active_sidebar == 'categories' %}active{% endif %}" onclick="location.pathname='/administration/categories'">
                 <div class="">
                     <svg class="categories-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_187_9175)">
@@ -51,7 +51,7 @@
                     <span>Categories</span>                        
                 </div>
             </li>
-            <li class="sidebar-item {% if active_sidebar == 'orders' %}active{% endif %}">
+            <li class="sidebar-item cursor-pointer {% if active_sidebar == 'orders' %}active{% endif %}">
                 <div>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="path-1-outside-1_187_9185" maskUnits="userSpaceOnUse" x="2.16634" y="2.11987" width="19" height="19" fill="black">
@@ -64,7 +64,7 @@
                     <span>Orders</span>                        
                 </div>
             </li>
-            <li class="sidebar-item {% if active_sidebar == 'users' %}active{% endif %}" onclick="location.pathname='/administration/users'">
+            <li class="sidebar-item cursor-pointer {% if active_sidebar == 'users' %}active{% endif %}" onclick="location.pathname='/administration/users'">
                 <div class="">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#454545" stroke-miterlimit="10"/>
@@ -75,7 +75,7 @@
                     <span>User Management</span>                        
                 </div>
             </li>
-            <li class="sidebar-item {% if active_sidebar == 'profile_settings' %}active{% endif %}">
+            <li class="sidebar-item cursor-pointer {% if active_sidebar == 'profile_settings' %}active{% endif %}">
                 <div>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM10.5 12C10.5 11.1716 11.1716 10.5 12 10.5C12.8284 10.5 13.5 11.1716 13.5 12C13.5 12.8284 12.8284 13.5 12 13.5C11.1716 13.5 10.5 12.8284 10.5 12Z" fill="#454545"/>
@@ -88,7 +88,7 @@
     </div>
     <div class="footer">
         <ul class="sidebar-menu">
-            <li class="sidebar-item">
+            <li class="sidebar-item cursor-pointer">
                 <div class="">
                     <img src="{% static "common/images/profile-image.png" %}" alt="">
                     <span>Alexa john</span>

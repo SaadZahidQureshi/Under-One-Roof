@@ -11,8 +11,16 @@ urlpatterns = [
     # users urls
     path('users/', views.users, name='users'),
     
-    # sows urls
+    # shows urls
     path('shows/', views.shows, name='shows'),
+    
+    # product type urls
+    path('product-types/', views.product_types, name="product_types"),
+    
+    
+    # categories urls
+    path('categories/', views.categories, name="categories"),
+    
     
     
 ]

@@ -1,6 +1,6 @@
 {% load static %}
 
-<div class="modal fade" id="add-show-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+<div class="modal fade" id="add-type-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="addUserLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content text-center ">
@@ -13,28 +13,14 @@
                 <div class="">
                 {% csrf_token %}
                     <div class="modal-header border-bottom-0 w-100 justify-content-center">
-                        <span class="add-user-modal-header-text" id="add-user-modal-header-text">Add Show</span>
+                        <span class="add-user-modal-header-text" id="add-user-modal-header-text">Add Product Type</span>
                         <span>Add a splash of excitement to our list below!</span>
                     </div>
                     <div class="modal-body ">
                         <div class="input-wrapper ">
-                            <label for="Show Name">Show Name</label>
+                            <label for="Name">Name</label>
                             <div>
-                                <input type="text" name="Show Name" id="Show Name" placeholder="CarpetWorkz" />
-                            </div>
-                        </div>
-                        <div class="input-wrapper ">
-                            <label for="Sales Tax Percentage">Sales Tax Percentage</label>
-                            <div>
-                                <input type="text" name="Sales Tax Percentage" id="Sales Tax Percentage" placeholder="0.00%" />
-                            </div>
-                        </div>
-                        <div class="input-wrapper date">
-                            <label for="expiry-date">Show Date</label>
-                            <div>
-                                <input type="date" name="start-date" id="date" placeholder="Start Date" />
-                                <span>to</span>
-                                <input type="date" name="end-date" id="date" placeholder="End Date" />
+                                <input type="number" name="Name" id="Name" placeholder="CarpetWorkz" />
                             </div>
                         </div>
                         <div class="input-wrapper status">
@@ -62,30 +48,26 @@
                             </div>
                         </div>
 
-                        <div class="input-wrapper description">
-                            <label for="description">Description</label>
-                            <div>
-                                <textarea name="description" id="description" placeholder='Description here..'></textarea>
-                            </div>
+                        <div class="input-wrapper add-ons">
+                            <label for="add-on">Add Ons</label>
+                            <svg id="add-addon-btn"  class="cursor-pointer" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_180_1956)">
+                                <path d="M6.94548 0.864455C3.59438 0.864455 0.864746 3.59447 0.864746 6.94557V19.0544C0.864746 22.4055 3.59399 25.1355 6.94548 25.1355H19.0543C22.4054 25.1355 25.1355 22.4055 25.1355 19.0544V6.94519C25.1355 3.59409 22.4054 0.864075 19.0543 0.864075L6.94548 0.864455ZM6.94548 2.89623H19.0543C21.3153 2.89623 23.1041 4.68463 23.1041 6.94557V19.0544C23.1041 21.3154 21.3153 23.1034 19.0543 23.1034H6.94548C4.68454 23.1034 2.89613 21.3154 2.89613 19.0544V6.94519C2.89613 4.68425 4.68454 2.89623 6.94548 2.89623ZM13.2389 5.99322C12.9696 5.99706 12.7129 6.10766 12.5252 6.30071C12.3374 6.49377 12.2341 6.75347 12.2378 7.02272V11.9177H7.34354C7.20786 11.914 7.0728 11.9375 6.94636 11.9868C6.81991 12.0362 6.70464 12.1104 6.60735 12.205C6.51006 12.2997 6.43273 12.4128 6.37993 12.5379C6.32713 12.6629 6.29992 12.7973 6.29992 12.933C6.29992 13.0688 6.32713 13.2031 6.37993 13.3282C6.43273 13.4532 6.51006 13.5664 6.60735 13.661C6.70464 13.7557 6.81991 13.8299 6.94636 13.8792C7.0728 13.9286 7.20786 13.9521 7.34354 13.9483H12.2378V18.8426C12.2351 18.9776 12.2595 19.1119 12.3093 19.2374C12.3592 19.363 12.4336 19.4773 12.5282 19.5738C12.6228 19.6702 12.7357 19.7468 12.8602 19.7991C12.9848 19.8514 13.1185 19.8784 13.2536 19.8784C13.3887 19.8784 13.5225 19.8514 13.647 19.7991C13.7716 19.7468 13.8845 19.6702 13.9791 19.5738C14.0737 19.4773 14.1481 19.363 14.1979 19.2374C14.2478 19.1119 14.2722 18.9776 14.2695 18.8426V13.9483H19.1637C19.2994 13.9521 19.4345 13.9286 19.5609 13.8792C19.6874 13.8299 19.8026 13.7557 19.8999 13.661C19.9972 13.5664 20.0745 13.4532 20.1274 13.3282C20.1802 13.2031 20.2074 13.0688 20.2074 12.933C20.2074 12.7973 20.1802 12.6629 20.1274 12.5379C20.0745 12.4128 19.9972 12.2997 19.8999 12.205C19.8026 12.1104 19.6874 12.0362 19.5609 11.9868C19.4345 11.9375 19.2994 11.914 19.1637 11.9177H14.2695V7.02272C14.2714 6.88691 14.246 6.75211 14.1948 6.62629C14.1437 6.50047 14.0678 6.38618 13.9717 6.29019C13.8756 6.1942 13.7613 6.11847 13.6354 6.06746C13.5095 6.01645 13.3747 5.9912 13.2389 5.99322Z" fill="#8EC549"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_180_1956">
+                                <rect width="26" height="26" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>                                
                         </div>
 
-                        <div class="input-wrapper location">
-                            <label for="location">Location</label>
-                            <div>
-                                <input type="text" name="location" id="location" placeholder="" />
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="8.25" cy="8.25" r="4.5" stroke="#8EC549" stroke-width="1.5"/>
-                                    <path d="M8.25 6C7.95453 6 7.66194 6.0582 7.38896 6.17127C7.11598 6.28434 6.86794 6.45008 6.65901 6.65901C6.45008 6.86794 6.28434 7.11598 6.17127 7.38896C6.0582 7.66195 6 7.95453 6 8.25" stroke="#8EC549" stroke-width="1.5" stroke-linecap="round"/>
-                                    <path d="M15 15L12.75 12.75" stroke="#8EC549" stroke-width="1.5" stroke-linecap="round"/>
-                                </svg>                                    
-                            </div>
+                        <div class="input-wrapper add-ons-cotnainer">
+                            {% comment %} addon items here  {% endcomment %}
                         </div>
 
-                        <div class="input-wrapper location">
-                            <div class="image-container">
-                                <img src="{% static "administration/modals/images/location-img.png" %}" alt="">
-                            </div>
-                        </div>
+
+
 
                     </div>
                     <div class="error-div">
@@ -93,7 +75,7 @@
                     </div>
                 </div>
                 <div class="modal-footer border-top-0"> 
-                    <button data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" data-bs-dismiss="modal">Cancel</button>
                     <button class="submit-btn" type="button" >
                         <span class="spinner-border spinner-border-sm hide" role="status" aria-hidden="true"></span>
                         <span class="btn-text">Save</span>
@@ -103,4 +85,4 @@
         </div>
     </div>
 </div>
-<input type="hidden" class="add-show-modal" data-bs-toggle="modal" data-bs-target="#add-show-modal" />
+<input type="hidden" class="add-type-modal" data-bs-toggle="modal" data-bs-target="#add-type-modal" />

@@ -1,20 +1,20 @@
-.show-container {
+.product-types-container {
     width: 100%;
     padding: 0px 20px 20px 20px;
 }
 
-.show-container > table {
+.product-types-container > table {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 10px;
     border: 1px solid  #EEF2F7;
 }
 
-.show-container > table > thead > tr {
+.product-types-container > table > thead > tr {
     background-color: #EEF2F7;
 }
 
-.show-container > table > thead > tr > th{
+.product-types-container > table > thead > tr > th{
     padding: 13px;
     text-align: center;
     font-size: 16px;
@@ -23,19 +23,19 @@
     color: #000000;
 }
 
-.show-container > table > thead > tr > th:first-child {
+.product-types-container > table > thead > tr > th:first-child {
     border-radius: 10px 0px 0px 0px;
 }
 
-.show-container > table > thead > tr > th:last-child {
+.product-types-container > table > thead > tr > th:last-child {
     border-radius: 0px 10px 0px 0px;
 }
 
-.show-container > table > tbody > tr {
+.product-types-container > table > tbody > tr {
     border-bottom: 1px solid #EEF2F7;
 }
 
-.show-container > table > tbody > tr > td {
+.product-types-container > table > tbody > tr > td {
     padding: 13px;
     font-size: 14px;
     font-weight: 500;
@@ -44,14 +44,14 @@
     color: #454545;
 }
 
-.show-container > table > tbody > tr > td > .location {
+.product-types-container > table > tbody > tr > td > .location {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.show-container > table > tbody > tr > td > .location a {
+.product-types-container > table > tbody > tr > td > .location a {
     width: 100%;
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@
     color: var(--primary-color);
 }
 
-.show-container > table > tbody > tr > td > .location a > span {
+.product-types-container > table > tbody > tr > td > .location a > span {
     font-size: 14px;
     font-weight: 500;
     line-height: 16.8px;
@@ -69,16 +69,16 @@
     color: inherit;
 }
 
-.show-container > table > tbody > tr > td > .status{
+.product-types-container > table > tbody > tr > td > .status{
     width: fit-content;
     margin: auto;
 }
 
-.show-container > table > tbody > tr > td > .status > button.show {
+.product-types-container > table > tbody > tr > td > .status > button.show {
     display: flex !important;
 }
 
-.show-container > table > tbody > tr > td > .status > button {
+.product-types-container > table > tbody > tr > td > .status > button {
     width: 140px;
     height: 30px;
     border: none;
@@ -103,7 +103,9 @@ span.inactive {
     color: #FF3B30 !important;
 }
 
-.show-container > table > tbody > tr > td > .status > button > span{
+
+
+.product-types-container > table > tbody > tr > td > .status > button > span{
     font-size: 14px;
     font-weight: 500;
     line-height: 16.8px;
@@ -111,21 +113,21 @@ span.inactive {
     color: var(--primary-color);
 }
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu {
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu {
     width: 100%;
     padding: 0px;
     border-radius: 8px;
 }
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:first-child {
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:first-child {
     border-radius: 8px 8px 0px 0px;
 }
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:last-child {
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:last-child {
     border-radius: 0px 0px 10px 10px;
 }
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label {
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label {
     width: 140px;
     height: 30px;
     display: flex;
@@ -134,7 +136,7 @@ span.inactive {
     gap: 10px;
 }
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > input {
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > input {
     appearance: none;
     border: 1px solid var(--primary-color);
     width: 15px;
@@ -145,7 +147,7 @@ span.inactive {
     border-radius: 4px;
 }
 
-.show-container > table > tbody > tr > td > .status >.dropdown-menu > .dropdown-item > label > input[type="radio"]:checked {
+.product-types-container > table > tbody > tr > td > .status >.dropdown-menu > .dropdown-item > label > input[type="radio"]:checked {
     appearance: none;
     outline: none;
     padding: 0;
@@ -153,7 +155,7 @@ span.inactive {
     border: none;
 }
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > input[type="radio"]:checked::before{
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > input[type="radio"]:checked::before{
     position: absolute;
     width: 15px;
     height: 15px;  
@@ -166,7 +168,7 @@ span.inactive {
     align-items: center;
 }
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > span{
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > span{
     font-size: 14px;
     font-weight: 400;
     line-height: 16.8px;
@@ -174,29 +176,29 @@ span.inactive {
     color: #6A6767;
 }
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active {
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active {
     background-color: var(--primary-color);
     color: #FFFFFF;
 }
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active >  label > span {
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active >  label > span {
     color: #FFFFFF !important;
 }
 
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active >  label > input[type="radio"]:checked::before {
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active >  label > input[type="radio"]:checked::before {
     background-color: #FFFFFF;
 }
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:hover {
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:hover {
     background-color: var(--primary-color);
     color: #FFFFFF;
 }
 
-.show-container > table > tbody > tr > td > .status >.dropdown-menu > .dropdown-item:hover >  label > span {
+.product-types-container > table > tbody > tr > td > .status >.dropdown-menu > .dropdown-item:hover >  label > span {
     color: #FFFFFF !important;
 }
 
-.show-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:hover >  label > input[type="radio"] {
+.product-types-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:hover >  label > input[type="radio"] {
     background-color: #FFFFFF;
 }

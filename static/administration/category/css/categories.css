@@ -1,0 +1,388 @@
+.categories-container {
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+}
+
+.categories-container > table {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid  #EEF2F7;
+}
+
+.categories-container > table > thead > tr {
+    background-color: #EEF2F7;
+}
+
+.categories-container > table > thead > tr > th{
+    padding: 13px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    color: #000000;
+}
+
+.categories-container > table > thead > tr > th:first-child {
+    border-radius: 10px 0px 0px 0px;
+}
+
+.categories-container > table > thead > tr > th:last-child {
+    border-radius: 0px 10px 0px 0px;
+}
+
+.categories-container > table > tbody > tr {
+    border-bottom: 1px solid #EEF2F7;
+}
+
+.categories-container > table > tbody > tr > td {
+    padding: 13px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: center;
+    color: #454545;
+    vertical-align: top;
+}
+
+.categories-container > table > tbody > tr > td > .location {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories-container > table > tbody > tr > td > .location a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.categories-container > table > tbody > tr > td > .location a > span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+    color: inherit;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > button.show {
+    display: flex !important;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > button {
+    width: 230px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 15px;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+button.inactive {
+    background: #FF3B3026 !important;
+}
+
+svg.inactive path{
+    fill: #FF3B30 !important;
+}
+
+span.inactive {    
+    color: #FF3B30 !important;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > button > span{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu {
+    width: 100%;
+    padding: 0px;
+    border-radius: 8px;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item {
+    padding: unset;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item:first-child {
+    border-radius: 8px 8px 8px 8px;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: unset;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu {
+    border: none;
+}
+
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu.show{
+    transform: translate(0px, 6px) !important;
+}
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu,
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item:hover {
+    background-color: transparent;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item > .manage-price-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;    
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item > .manage-price-container > .price-container {
+    width: 100%;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item > .manage-price-container > .price-container > input{
+    width: 100%;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 0px 5px 0px #00000021;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+    color: #454545;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item > .manage-price-container > .padding-protection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 5px 8px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 0px 5px 0px #00000021;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item > .manage-price-container > .padding-protection > div{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item > .manage-price-container > .padding-protection > div.hr {
+    content: '';
+    width: 1px;
+    height: 100%;
+    color: #000000;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item > .manage-price-container > .padding-protection > div > span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.4px;
+    text-align: center;
+    color: #000000;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item > .manage-price-container > .padding-protection > div > .input-wrapper{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item > .manage-price-container > .padding-protection > div > .input-wrapper > label {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.4px;
+    text-align: center;
+    color: #313131;
+}
+
+.categories-container > table > tbody > tr > td.manage-prices > .dropdown > .dropdown-menu > .dropdown-item > .manage-price-container > .padding-protection > div > .input-wrapper > input{
+    width: 50px;
+    height: 30px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 0px 5px 0px #00000021;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+    color: #454545;
+}
+
+
+.categories-container > table > tbody > tr > td.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories-container > table > tbody > tr > td.image > div {
+    width: 35px;
+    height: 35px;
+}
+
+.categories-container > table > tbody > tr > td.image > div > img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.categories-container > table > tbody > tr > td > .status{
+    width: fit-content;
+    margin: auto;
+}
+
+.categories-container > table > tbody > tr > td > .status > button.show {
+    display: flex !important;
+}
+
+.categories-container > table > tbody > tr > td > .status > button {
+    width: 140px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 15px;
+    background: #EDF5E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+button.inactive {
+    background: #FF3B3026 !important;
+}
+
+svg.inactive path{
+    fill: #FF3B30 !important;
+}
+
+span.inactive {    
+    color: #FF3B30 !important;
+}
+
+
+
+.categories-container > table > tbody > tr > td > .status > button > span{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu {
+    width: 100%;
+    padding: 0px;
+    border-radius: 8px;
+}
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:first-child {
+    border-radius: 8px 8px 0px 0px;
+}
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label {
+    width: 140px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > input {
+    appearance: none;
+    border: 1px solid var(--primary-color);
+    width: 15px;
+    height: 15px;
+    content: none;
+    outline: none;
+    margin: 0;
+    border-radius: 4px;
+}
+
+.categories-container > table > tbody > tr > td > .status >.dropdown-menu > .dropdown-item > label > input[type="radio"]:checked {
+    appearance: none;
+    outline: none;
+    padding: 0;
+    content: none;
+    border: none;
+}
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > input[type="radio"]:checked::before{
+    position: absolute;
+    width: 15px;
+    height: 15px;  
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    content: url('/static/UoneR/order/images/radio-check.svg') !important;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item > label > span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+    color: #6A6767;
+}
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active >  label > span {
+    color: #FFFFFF !important;
+}
+
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:active >  label > input[type="radio"]:checked::before {
+    background-color: #FFFFFF;
+}
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.categories-container > table > tbody > tr > td > .status >.dropdown-menu > .dropdown-item:hover >  label > span {
+    color: #FFFFFF !important;
+}
+
+.categories-container > table > tbody > tr > td > .status > .dropdown-menu > .dropdown-item:hover >  label > input[type="radio"] {
+    background-color: #FFFFFF;
+}
