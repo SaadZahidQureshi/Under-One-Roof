@@ -96,3 +96,7 @@ def order_details (request):
     context['active_page'] = 'orders'
     
     return render(request, 'order/order-details.html', context)
+
+def test_url(request):
+    context = {}
+    return render(request, 'test/test-file.html', context)

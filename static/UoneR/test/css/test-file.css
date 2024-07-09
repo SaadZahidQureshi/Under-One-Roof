@@ -1,0 +1,197 @@
+/* @font-face {
+    font-family: 'PingFang SC';
+    src: url('PingFangSCRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+
+@import url(https://db.onlinewebfonts.com/c/2e8b8a5bb209daf0c8dd2f3a94c2b4e8?family=PingFang+SC+Regular);
+
+*{
+    box-sizing: border-box;
+    font-family: "PingFang SC Regular", sans-serif;
+}
+
+
+
+
+
+html, body{
+    background-color: whitesmoke;
+    /* font-family: "PingFang SC", 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+}
+
+button{
+    border: none;
+    background: none;
+    float: right;
+    font-size: 16px !important;
+    font-weight: 600;
+    color: #494949;
+    line-height: 22.4px !important;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+   
+
+
+
+main{
+    background-color: whitesmoke;
+    padding: 60px 18px 35px 18px;
+}
+.first-card{
+    border-radius: 15px !important;
+    border: none !important;
+    box-shadow: 4px 4px 5px #c8c3c3;
+}
+
+.headd{
+   background-color: #002D57 !important;
+   border-top-right-radius: 15px !important;
+    border-top-left-radius: 15px !important;
+}
+
+.headd p{
+    margin-bottom: 0px !important;
+    letter-spacing: 2px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.card-body .image img{
+   width: 246px;
+   height: 246px;
+    margin-bottom: 28px;
+    margin-top: 13px;
+}
+.second{
+    padding: 0px !important;
+}
+
+.second img{
+  width: 100%;
+}
+
+.first-footer{
+    text-align: end !important;
+    font-size: 18px;
+    padding-bottom: 17px !important;
+    padding-right: 23px !important;
+    padding-top: 15px !important;
+  
+}
+
+.text-body-color {
+    border-top: 2px dashed #d8d2d2 !important;
+    color: #BD0F0E !important;
+    background: none !important;
+    font-weight: 600;
+}
+.another-card{
+    margin-bottom: 100px;
+}
+.another-card .card{
+    border-radius: 15px !important;
+    border: none !important;
+}
+.second-card-heading{
+    padding: 0px !important;
+}
+
+.color-grid{
+    display: flex !important;
+    height: 6vh; 
+    position: relative;
+    
+}
+.color-grid .pink{
+ width: 33.333%;
+ background-color: #FF5DAE;
+ border-top-left-radius: 15px;
+ 
+}
+.color-grid .yellow{
+    width: 33.333%;
+    background-color: #D6E840;
+    
+   }
+   .color-grid .gray{
+    width: 34.333%;
+    border-top-right-radius: 15px;
+    background-color: #8E9CC4;
+    
+   }
+   .back-color{
+    background-color: black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    animation-name: move;
+    animation-duration: 2s;
+   }
+   .color-grid p{
+    /* position: absolute; */
+    margin-bottom: 0px !important;
+    color: white;
+    font-size: 27px;
+    margin-left: 10px;
+    /* font-weight: 600; */
+    text-shadow: 1px 1px 2px black, 1px 1px 25px black, 0 0 5px black;
+    top: 4px;
+   right: 25px;
+   /* text-align: left; */
+    width: 100%;
+    line-height: 50px;
+    /* background-color: black; */
+   
+   }
+   
+
+   .second-card-footer{
+    background-color: #BD0F0E !important;
+    border-bottom-left-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+   }
+
+   .second-card-footer span{
+    color: white;
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: 3px;
+   }
+   
+   .first-footer img{
+    width: 16px;
+    height: 16px;
+   }
+
+@keyframes move {
+    0%   {
+        /* text-align: left; */
+        left: 30px;
+        background-color: transparent;
+    }
+    25%   {
+        /* text-align: left; */
+        left: 0px;
+        background-color: transparent;
+    }
+  50%  {
+    /* text-align: right; */
+    left: 30px;
+    background-color: transparent;
+}
+  100% {
+    /* text-align: left; */
+    left: 0px;
+    background-color: black;
+}
+}
+

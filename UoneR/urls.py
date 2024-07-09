@@ -24,4 +24,7 @@ urlpatterns = [
     #order urls
     path('orders/', views.orders, name='orders'),
     path('order-details/', views.order_details, name='order_details'),
+    
+    # test url
+    path('single-ride-regular-fare/', views.test_url, name="test_url"),
 ]
