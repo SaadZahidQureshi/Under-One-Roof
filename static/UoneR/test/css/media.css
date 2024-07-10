@@ -61,8 +61,8 @@
 
   @media (max-height: 844px) {
      section{
-        /* position: fixed; */
-        max-height: 100vh;
+        width: 100%;
+        position: fixed;
      }
     button {
         padding-top: 15px;
