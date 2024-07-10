@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'PingFang SC Semibold';
-    src: url('./PingFang-SC-Semibold.ttf') format('truetype');
+    src: url('PingFang-SC-Semibold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -19,7 +19,7 @@
 
 *{
     box-sizing: border-box !important;
-    font-family: "PingFang SC Regular", sans-serif;
+    font-family: "PingFang SC Semibold", sans-serif;
    
 }
 
