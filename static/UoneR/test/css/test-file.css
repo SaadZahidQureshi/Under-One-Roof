@@ -8,28 +8,33 @@
 
 /* @import url(https://db.onlinewebfonts.com/c/2e8b8a5bb209daf0c8dd2f3a94c2b4e8?family=PingFang+SC+Regular); */
 
-@font-face {
-    font-family: 'PingFang SC Semibold';
-    src: url('./PingFang-SC-Semibold.ttf') format('truetype');
+/* @font-face {
+    font-family: 'ProductSans';
+    src: url('./ProductSansRegular.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
+} */
+@font-face {
+    font-family: 'Product Sans';
+    src: url('./ProductSans-Medium.ttf') format('truetype');
+    font-weight: 500;
     font-style: normal;
 }
 
-body {
-    width: 100%;
-    height: 100%;
-}
+/* @font-face {
+    font-family: 'Product Sans';
+    src: url('ProductSans-Medium.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;
+} */
+
 
 
 *{
     box-sizing: border-box !important;
-    font-family: "PingFang SC Regular", sans-serif;
-   
+    font-family: 'Product Sans', sans-serif;
+    /* font-weight: 500; */   
 }
-
-
-
-
 
 html, body{
     background-color: whitesmoke;
@@ -70,13 +75,9 @@ main{
 }
 
 .headd{
-    height: 45px;
    background-color: #002D57 !important;
-   border-top-right-radius: 15px !important;
-    border-top-left-radius: 15px !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   border-top-right-radius: 10px !important;
+    border-top-left-radius: 10px !important;
 }
 
 .headd p{
@@ -84,13 +85,13 @@ main{
     letter-spacing: 2px;
     color: #fff;
     font-size: 20px;
-    font-weight: 600;
+    /* font-weight: 600; */
     line-height: 28px;
 }
 
 .card-body .image img{
-   width: 246px;
-   height: 246px;
+   width: 235px;
+   height: 235px;
     margin-bottom: 28px;
     margin-top: 13px;
 }
@@ -100,7 +101,7 @@ main{
 
 .second img{
   width: 100%;
-  height: 170px;
+  height: 180px;
 }
 
 .first-footer{
@@ -119,7 +120,7 @@ main{
     font-weight: 600;
 }
 .another-card{
-    margin-bottom: 100px;
+    margin-bottom: 75px;
 }
 .another-card .card{
     border-radius: 15px !important;
@@ -127,6 +128,13 @@ main{
 }
 .second-card-heading{
     padding: 0px !important;
+}
+.second .svg-image{
+    background-image: url('../images/imagee.png');
+    width: 100%;
+    height: 170px;
+    background-position: center;
+    background-size: cover;
 }
 
 .color-grid{
@@ -137,23 +145,22 @@ main{
 }
 .color-grid .pink{
  width: 33.333%;
- background-color: #FF5DAE;
- border-top-left-radius: 15px;
+ background-color: #DC4062;
+ border-top-left-radius: 10px;
  
 }
 .color-grid .yellow{
     width: 33.333%;
-    background-color: #D6E840;
+    background-color: #B9A784;
     
    }
    .color-grid .gray{
     width: 34.333%;
-    border-top-right-radius: 15px;
-    background-color: #8E9CC4;
+    border-top-right-radius: 10px;
+    background-color: #A350C3;
     
    }
    .back-color{
-    padding-top: 7px;
     /* background-color: black; */
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -164,41 +171,53 @@ main{
     animation-name: move;
     animation-duration: 3s ;
     animation-iteration-count: infinite;
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
    }
    .color-grid p{
     /* position: absolute; */
     margin-bottom: 0px !important;
     color: white;
-    font-size: 27px;
+    /* font-size: 27px; */
     /* margin-left: 10px; */
     /* font-weight: 600; */
     text-shadow: 1px 1px 2px black, 1px 1px 25px black, 0 0 5px black;
+    top: 4px;
+   right: 25px;
    /* text-align: left; */
     width: 100%;
-    /* line-height: 41px; */
+    line-height: 28px;
     text-align: center;
-    margin-left: 30px;
-    letter-spacing: 1px;
+    margin-left: 70px;
     /* background-color: black; */
    
    }
-  
+   #datetime {
+    font-size: 27px;
+    color: #ffffff;
+    /* background-color: #000000; */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
    
 
    .second-card-footer{
-    background-color: #BD0F0E !important;
-    border-bottom-left-radius: 15px !important;
-    border-bottom-right-radius: 15px !important;
-    height: 45px;
+    height: 32px;
+    background-color: #BE0F0F !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
    }
 
    .second-card-footer span{
     color: white;
-    font-weight: 600;
-    font-size: 19px;
+    /* font-weight: 600; */
+    font-size: 16px;
     letter-spacing: 3px;
    }
    
@@ -211,7 +230,7 @@ main{
    @keyframes move {
     0%   {
     
-        right: 60px;
+        right: 80px;
     }
   50%  {
   
@@ -221,7 +240,7 @@ main{
   100% {
    
    
-   right: 60px;  
+   right: 80px;  
   }
 } 
    

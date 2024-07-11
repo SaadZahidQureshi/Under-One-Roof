@@ -14,25 +14,26 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime(); // Initial call to display time immediately on load
 
- // Function to get the current time in a readable 12-hour format with AM/PM
- function getCurrentTime() {
+
+// Function to get the current time in a readable 12-hour format with AM/PM
+function getCurrentTime() {
     const now = new Date();
     let hours = now.getHours();
     const minutes = now.getMinutes();
-    const seconds = now.getSeconds();
+    // const seconds = now.getSeconds();
     const ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
     hours = hours ? hours : 12; // The hour '0' should be '12'
     const strMinutes = minutes < 10 ? '0' + minutes : minutes;
-    const strSeconds = seconds < 10 ? '0' + seconds : seconds;
-    return `${hours}:${strMinutes}:${strSeconds} ${ampm}`;
+    // const strSeconds = seconds < 10 ? '0' + seconds : seconds;
+    return `${hours}:${strMinutes} ${ampm}`;
 }
 
-// Check if 'pageLoadTime' is stored in localStorage
+// 
 let pageLoadTime = localStorage.getItem('pageLoadTime');
 
 if (!pageLoadTime) {
-    // If it doesn't exist, get the current time and store it in localStorage
+    
     pageLoadTime = getCurrentTime();
     localStorage.setItem('pageLoadTime', pageLoadTime);
 }

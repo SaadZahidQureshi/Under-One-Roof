@@ -9,9 +9,9 @@
        
         padding: 12px 22px 23px 22px;
     }
-   .headd{
+   /* .headd{
     padding: 4px !important;
-   }
+   } */
    .headd p {
 
     font-size: 15px !important;
@@ -29,27 +29,29 @@
     height: 5vh;
 }
 #datetime {
-    font-size: 18px !important;
+    font-size: 22px !important;
 }
 .color-grid p {
-    line-height: 19px !important;
+    line-height: 27px !important;
 }
 .second img {
-    width: 283px;
+    width: 100%;
     height: 120px;
 }
 .second-card-footer {
-    padding: 4px !important;
+    padding: 9px !important;
+    height: 45px;
 }
 .second-card-footer span {
-    font-size: 15px;
+    font-size: 19px;
     letter-spacing: 2px;
 }
 .first-footer {
     font-size: 15px;
     padding-bottom: 7px !important;
     padding-right: 18px !important;
-    padding-top: 7px !important;
+    padding-top: 10px !important;
+    height: 45px;
 }
 .first-footer img {
     width: 14px;
@@ -61,29 +63,44 @@
 
   @media (max-height: 844px) {
      section{
-        width: 100%;
-        position: fixed;
+        /* position: fixed; */
      }
     button {
         padding-top: 15px;
         padding-right: 19px;
     }
     main {
-        padding: 11px 20px 34px 20px;
+        padding: 12px 20px 12px 20px;
     }
     .headd{
-        padding: 7px;
+        padding: 10px !important;
+        height: 45px;
     }
     .headd p {
         font-size: 18px;
     }
     .color-grid {
-        height: 5vh;
+        height: 50px;
     }
     #datetime {
-        font-size: 20px;
+        font-size: 25px;
     }
     .color-grid p {
-        line-height: 25px;
+        line-height: 33px;
+    }
+    .another-card {
+        margin-bottom: 65px;
+    }
+    .second .svg-image {
+        width: 100%;
+        height: 120px;
+    }
+    .second-card-footer{
+        height: 32px;
+    }
+    .second-card-footer span {
+       
+        font-size: 16px;
+       
     }
   }
