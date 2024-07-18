@@ -9,12 +9,12 @@
 {% block settings %}
 
 <div class="settings-main-content-container">
-    <form action="">
+    <form action="" id="updateUserForm" method="post" enctype="multipart/form-data">
         <div class="title-image-container">
             <div class="profile-image-container ">
                 <label for="profile_image">
-                    <img class="profile-image cursor-pointer" id="profile-image" src="{% static "UoneR/settings/images/profile-image.png" %}" alt="">
-                    <input class="d-none" type="file" name="profile-image" id="profile_image" onchange="previewImage(event, this); ">
+                    <img class="profile-image cursor-pointer" id="profile-image" src="{{user.profile_picture.url}}" alt="">
+                    <input class="d-none" type="file" accept="image/jpeg, image/jpg, image/png" name="profile_picture" id="profile_image" onchange="previewImage(event, this); ">
                     <svg class="edit-svg" width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_69_3864)">
                         <rect x="5.5" y="5" width="40" height="40" rx="20" fill="#8EC549" shape-rendering="crispEdges"/>
@@ -43,26 +43,33 @@
             </div>
             <span>Profile Picture</span>    
         </div>
-
+        {% csrf_token %}
+        <p class="user_id hide">{{user.id}}</p>
         <div class="inputs-container">
             <div class="input-wrapper">
                 <label for="business-name">Business Name</label>
-                <input type="text" name="business-name" id="business-name" placeholder="Carpet Expo">
+                <input type="text" name="business_name" id="business-name" placeholder="Carpet Expo" value="{% if user.is_authenticated %}{{user.business.business_name}}{% endif %}">
             </div>
 
             <div class="input-wrapper">
                 <label for="name">Your Name</label>
-                <input type="text" name="name" id="name" placeholder="Alexandra">
+                <input type="text" name="full_name" id="name" placeholder="Alexandra" value="{% if user.is_authenticated %}{{user.full_name}}{% endif %}">
             </div>
 
             <div class="input-wrapper">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="alexandra@gamil.com">
+                <input type="email" name="email" id="email" placeholder="alexandra@gamil.com" value="{% if user.is_authenticated %}{{user.email}}{% endif %}">
             </div>
+        </div>
+        <div class="error-div w-100">
+            <small class="create-error-msg input-error-msg"></small>
         </div>
 
         <div class="button-container">
-            <button type="buttom">Save Changes</button>
+            <button type="submit" onclick="updateUserForm(event);">
+                <span class="spinner-border spinner-border-sm hide" role="status" aria-hidden="true"></span>
+                <span class="btn-text">Save Changes</span>
+            </button>
         </div>
 
     </form>

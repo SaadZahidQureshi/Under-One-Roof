@@ -9,7 +9,7 @@
                     <path d="M0.891249 8.40697C0.877523 8.29803 0.877523 8.18779 0.891249 8.07885V8.0001C0.891857 7.86074 0.91857 7.72274 0.970001 7.59322C1.02448 7.44588 1.10946 7.3117 1.21937 7.19947L7.78187 0.636973C8.02902 0.389824 8.36423 0.250977 8.71375 0.250977C9.06327 0.250977 9.39848 0.389824 9.64562 0.636973C9.89277 0.884121 10.0316 1.21933 10.0316 1.56885C10.0316 1.91837 9.89277 2.25357 9.64562 2.50072L5.28813 6.6876H17.875C18.2231 6.6876 18.5569 6.82588 18.8031 7.07202C19.0492 7.31816 19.1875 7.652 19.1875 8.0001C19.1875 8.34819 19.0492 8.68203 18.8031 8.92818C18.5569 9.17432 18.2231 9.3126 17.875 9.3126H5.28813L9.61937 13.6307C9.74239 13.7527 9.84004 13.8979 9.90667 14.0578C9.9733 14.2178 10.0076 14.3893 10.0076 14.5626C10.0076 14.7359 9.9733 14.9074 9.90667 15.0674C9.84004 15.2273 9.74239 15.3725 9.61937 15.4945C9.49736 15.6175 9.3522 15.7151 9.19226 15.7818C9.03232 15.8484 8.86077 15.8827 8.6875 15.8827C8.51423 15.8827 8.34268 15.8484 8.18274 15.7818C8.0228 15.7151 7.87764 15.6175 7.75563 15.4945L1.19313 8.93197C1.08718 8.81665 1.00272 8.6833 0.94375 8.53822C0.918476 8.498 0.900688 8.45353 0.891249 8.40697Z" fill="#8EC549"/>
                 </svg>                    
             </div>
-            <form class="main-content-container add-card-container">
+            <form class="main-content-container add-card-container" id="addShowForm">
                 <div class="">
                 {% csrf_token %}
                     <div class="modal-header border-bottom-0 w-100 justify-content-center">
@@ -20,27 +20,27 @@
                         <div class="input-wrapper ">
                             <label for="Show Name">Show Name</label>
                             <div>
-                                <input type="text" name="Show Name" id="Show Name" placeholder="CarpetWorkz" />
+                                <input type="text" name="show_name" id="Show Name" placeholder="CarpetWorkz" />
                             </div>
                         </div>
                         <div class="input-wrapper ">
                             <label for="Sales Tax Percentage">Sales Tax Percentage</label>
                             <div>
-                                <input type="text" name="Sales Tax Percentage" id="Sales Tax Percentage" placeholder="0.00%" />
+                                <input type="number" name="sales_tax_percentage" id="Sales Tax Percentage" placeholder="0.00%" />
                             </div>
                         </div>
                         <div class="input-wrapper date">
                             <label for="expiry-date">Show Date</label>
                             <div>
-                                <input type="date" name="start-date" id="date" placeholder="Start Date" />
+                                <input type="date" name="start_date" id="date" placeholder="Start Date" />
                                 <span>to</span>
-                                <input type="date" name="end-date" id="date" placeholder="End Date" />
+                                <input type="date" name="end_date" id="date" placeholder="End Date" />
                             </div>
                         </div>
                         <div class="input-wrapper status">
                             <label for="Status">Status</label>
                             <div class="dropdown">
-                                <input type="text" name="Status" id="Status" placeholder="Active" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                                <input class="selected-filter-text" type="text" name="status" id="Status" placeholder="Active" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.7242 7.13794L9.00002 10.8621L5.27588 7.13794" stroke="#8EC549" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
@@ -48,13 +48,13 @@
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-item">
                                         <label for="add-active">
-                                            <input type="radio" checked name="add-show-filter" id="add-active" onclick="selectFilter(this, 'Active')">
+                                            <input type="radio" name="status-radio" id="add-active" value="true" onclick="selectStatusFilter(this, 'Active')">
                                             <span>Active</span>
                                         </label>
                                     </li>
                                     <li class="dropdown-item">
                                         <label for="add-Inactive">
-                                            <input type="radio"  name="add-show-filter" id="add-Inactive" onclick="selectFilter(this, 'Inactive')">
+                                            <input type="radio"  name="status-radio" id="add-Inactive" value="false" onclick="selectStatusFilter(this, 'Inactive')">
                                             <span>Inactive</span>
                                         </label>
                                     </li>
@@ -93,8 +93,8 @@
                     </div>
                 </div>
                 <div class="modal-footer border-top-0"> 
-                    <button data-bs-dismiss="modal">Cancel</button>
-                    <button class="submit-btn" type="button" >
+                    <button type="button" data-bs-dismiss="modal">Cancel</button>
+                    <button class="submit-btn" type="submit" onclick="addShowForm(event);">
                         <span class="spinner-border spinner-border-sm hide" role="status" aria-hidden="true"></span>
                         <span class="btn-text">Save</span>
                     </button>

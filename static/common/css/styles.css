@@ -76,6 +76,10 @@ textarea::placeholder {
     color: var(--input-placeholder-color);
 }
 
+input:focus-visible, textarea:focus-visible {
+    outline: 1px solid var(--primary-color);
+}
+
 .cursor-pointer{
     cursor: pointer;
 }

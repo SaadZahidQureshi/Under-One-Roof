@@ -3,6 +3,8 @@ function selectFilter(input, filterType) {
     const filterText = row.querySelector('.selected-filter-text');
     filterText.innerText = filterType;
 
+    console.log(filterText.innerText)
+
     const dropdownButton = filterText.closest("button");
     const svg = dropdownButton.querySelector("svg");
 

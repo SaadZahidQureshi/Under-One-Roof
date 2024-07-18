@@ -305,6 +305,42 @@ nav .logo-container {
     height: 40px;
 }
 
+.favourite-container,.notification-container,.user-profile-container > .logout.dropdown-menu {
+    right: 0% !important;
+    left: unset !important;
+    margin-top: unset !important;
+    padding: unset !important;
+    border-radius: 8px !important;
+    background: #F8FCFE !important;
+}
+
+.favourite-container,.notification-container,.user-profile-container > .logout.dropdown-menu::before {
+    left: 85% !important;
+}
+
+.favourite-container,.notification-container,.user-profile-container > .logout.dropdown-menu > .dropdown-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 8px;
+}
+
+.favourite-container,.notification-container,.user-profile-container > .logout.dropdown-menu > .dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.favourite-container,.notification-container,.user-profile-container > .logout.dropdown-menu > .dropdown-item:hover svg path{
+    fill: #FFFFFF;
+}
+
+.favourite-container,.notification-container,.user-profile-container > .logout.dropdown-menu > .dropdown-item:hover span{
+    color: #FFFFFF;
+}
+
+
 .favourite-container > svg:hover rect {
     fill: var(--primary-color);
 }
@@ -525,7 +561,7 @@ nav .logo-container {
 }
 
 #header-div .navbar button:hover > span:last-child {
-    /* background-color: #FFFFFF; */
+    background-color: #FFFFFF;
     color: #000000;
 }
 

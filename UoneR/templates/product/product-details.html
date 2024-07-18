@@ -150,12 +150,12 @@
                         <div class="dimensions">
                             <div class="">
                                 <span>Width</span>
-                                <input type="text" name="" id="">
+                                <input type="text" name="width" id="width">
                                 <span>Feet</span>
                             </div>
                             <div class="">
-                                <span>Width</span>
-                                <input type="text" name="" id="">
+                                <span>Height</span>
+                                <input type="text" name="height" id="height">
                                 <span>Feet</span>
                             </div>
                         </div>
@@ -166,9 +166,8 @@
                             <span> = $3200</span>
                         </div>
                     </div>
-                    
                     <div class="add-to-cart">
-                        <button type="button"  onclick="openSignInModal('login-modal')">Add to Cart</button>
+                        <button type="button" {% if user.is_authenticated == False %}  onclick="openSignInModal('login-modal')" {% endif %}>Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -181,6 +180,7 @@
 {% include "../includes/services-container.html" %}
 {% include "../modals/sign-in.html" %}
 {% include "../modals/signup.html" %}
+
 {% endblock content %}
 
 {% block addjs %}

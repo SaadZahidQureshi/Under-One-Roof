@@ -14,7 +14,8 @@
     </div>
 
     <div class="form-container h-100">
-        <form action="">
+        <form action="" id="verifyOTPForm">
+            {% csrf_token %}
             <div class="input-wrapper">
                 <div class="code-inputs w-100">
                     <input id='input1' required placeholder="•" name="digit1" type='text' maxLength="1" />
@@ -23,12 +24,25 @@
                     <input id='input4' required data-position="last" placeholder="•" name="digit4" type='text' maxLength="1" />
                 </div>
                 <div class="resend-code-container justify-content-center">
-                    <span class="didnt-recieved-code">Didn’t receive the code? <a href="#">Resend Code</a></span>
+                    <span class="didnt-recieved-code">Didn’t receive the code? <span class="btn-text">Resend Code</span>
+                        {% comment %} <form action="" id="sendOTPForm">
+                            {% csrf_token %}
+                            <button type="button" onclick="sendOTPForm(event, this);">
+                                <span class="spinner-border spinner-border-sm hide" role="status" aria-hidden="true"></span>
+                                <span class="btn-text">Resend Code</span>
+                            </button>
+                        </form> {% endcomment %}
+                </span>
                 </div>
             </div>
-
+            <div class="error-div w-100 h-100">
+                <small class="create-error-msg input-error-msg"></small>
+            </div>
             <div class="button-container">
-                <button type="button" onclick="location.pathname='administration/reset-password'">Submit</button>
+                <button type="submit" onclick="verifyOTPForm(event);">
+                    <span class="spinner-border spinner-border-sm hide" role="status" aria-hidden="true"></span>
+                    <span class="btn-text">Submit</span>
+                </button>
             </div>
         </form>
     </div>
