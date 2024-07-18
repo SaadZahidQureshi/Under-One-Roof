@@ -109,8 +109,6 @@ class SendOTPAPIView(APIView):
             user = User.objects.filter(email=email).first()
             if user is not None:
                 return Response({'success': False, 'message': 'This email is already registered.'}, status=status.HTTP_404_NOT_FOUND)
-            elif user.is_delete:
-                return Response({'success': False, 'message': 'This account is deleted.'}, status=status.HTTP_401_UNAUTHORIZED)
             else:
                 token = send_verification_code_email(email)
                 if token == False:
